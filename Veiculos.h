@@ -1,5 +1,5 @@
-#include<iostream>
-#include<string>
+#include  <iostream>
+#include  <string>
 
 class Veiculos : protected ListasDataNodo{
 
@@ -19,4 +19,7 @@ class Veiculos : protected ListasDataNodo{
     
     void setProximoCliente(ListasDataNodo* newProximoCliente);
     ListaDataNodo* getProximoCliente();
+    
+    ListaDataNodo* criarVeiculo(ListaDataNodo* listaVeiculos);
+    Void apagaVeiculo(ListaDataNodo* veiculo);
 };

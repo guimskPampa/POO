@@ -1,7 +1,7 @@
-#include<iostream>
-#include<string>
+#include  <iostream>
+#include  <string>
 
-class Pedidos{
+class Pedidos : protected  ListasDataNodo{
        
   public:
   
@@ -22,4 +22,7 @@ class Pedidos{
     
     void setVeiculoPedido(string newTipo, Veiculos *listaVeiculos);
     void getVeiculoPedido();
+    
+    ListaDataNodo* criarPedido(ListaDataNodo* listaPedidos);
+    Void apagaPedido(ListaDataNodo* pedido);
 };

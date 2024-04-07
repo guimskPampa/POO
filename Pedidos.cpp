@@ -56,5 +56,13 @@ void Pedidos::getVeiculoPedido(){
   cout << "Info Veiculo:\n" << "tipo: " << veiculo->getTipo();
   cout << "\nCapacidade de carga: " << veiculo->getCapacidadeCarga();
   cout << "\nAno de Fabricacao: "<< veiculo->getAnoFabricacao() << "\nChassi: "<< veiculo->getChassi();
-} 
+}
+
+ListaDataNodo* criarPedido(ListaDataNodo* listaPedidos{
+  ListaDataNodo* criarNodo(ListaDataNodo* listaPedidos);
+}
+
+Void apagaPedido(ListaDataNodo* pedido){
+  Void apagaNodo(ListaDataNodo* pedido);
+}
 

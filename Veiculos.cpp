@@ -42,3 +42,11 @@ void Veiculos::setProximoCliente(ListasDataNodo* newProximoCliente){
 ListaDataNodo* Veiculos::getProximoCliente(){
   return getProximoNodo ();
 }
+
+ListaDataNodo* criarVeiculo(ListaDataNodo* listaVeiculos){
+  ListaDataNodo* criarNodo(ListaDataNodo* listaVeiculos);
+}
+
+Void apagaCliente(ListaDataNodo* veiculo){
+  Void apagaNodo(ListaDataNodo* veiculo);
+}

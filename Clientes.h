@@ -1,5 +1,8 @@
+#include  <iostream>
+#include  <string>
+
 class Clientes : protected ListasDataNodo{
-   
+    
   public:
 
     void setIdade(int minhaIdade);
@@ -13,4 +16,7 @@ class Clientes : protected ListasDataNodo{
     
     void setProximoCliente(ListasDataNodo* newProximoCliente);
     ListaDataNodo* getProximoCliente();
+    
+    ListaDataNodo* criarCliente(ListaDataNodo* listaClientes);
+    Void apagaCliente(ListaDataNodo* cliente);
 };

@@ -34,3 +34,11 @@ void Clientes::setProximoCliente(ListasDataNodo* newProximoCliente){
 ListaDataNodo* Clientes::getProximoCliente(){
   return getProximoNodo ();
 }
+
+ListaDataNodo* criarCliente(ListaDataNodo* listaClientes){
+  ListaDataNodo* criarNodo(ListaDataNodo* listaClientes);
+}
+
+Void apagaCliente(ListaDataNodo* cliente){
+  Void apagaNodo(ListaDataNodo* cliente);
+}
