@@ -13,3 +13,5 @@
 
 ===================Alteracoes===================
 -Botar para as classes dos itens herdarem do lista;
+-Alterar opcoes no Main para que pecam os dados necessarios;
+-Alterar apagaNodo para que receba Lista;
