@@ -1,7 +1,9 @@
 #include  <iostream>
 #include  <string>
 
-class Veiculos : protected ListasDataNodo{
+using namespace std;
+
+class Veiculos : protected ListaDataNodo{
 
   public:
   
@@ -21,5 +23,5 @@ class Veiculos : protected ListasDataNodo{
     ListaDataNodo* getProximoCliente();
     
     ListaDataNodo* criarVeiculo(ListaDataNodo* listaVeiculos);
-    Void apagaVeiculo(ListaDataNodo* veiculo);
+    void apagaVeiculo(ListaDataNodo* veiculo);
 };

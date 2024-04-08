@@ -1,7 +1,7 @@
 #include  <iostream>
 #include  <string>
 #include  "Veiculos.h"
-#include  "ListaDataNodo.h"
+#include  "ListasDataNodo.h"
 
 void Veiculos::setTipo(string newTipo){
   setAtributoString1 (newTipo);
@@ -16,37 +16,37 @@ void Veiculos::setCapacidadeCarga(int newCapacidadeCarga){
 }
 
 int Veiculos::getCapacidadeCarga(){
-  return getAtributoInt1 (); 
+  return ListaDataNodo::getAtributoInt1 (); 
 }
 
 void Veiculos::setAnoFabricacao(int newAnoFabricacao){
-  setAtributoInt2 (newAnoFabricacao);
+  ListaDataNodo::setAtributoInt2 (newAnoFabricacao);
 }
 
 int Veiculos::getAnoFabricacao(){
-  return  getAtributoInt2 ();
+  return  ListaDataNodo::getAtributoInt2 ();
 }
      
 void Veiculos::setChassi(int newChassi){
-  setAtributoInt3 (newChassi);
+  ListaDataNodo::setAtributoInt3 (newChassi);
 }
 
 int Veiculos::getChassi(){
-  return getAtributoInt3 ();
+  return ListaDataNodo::getAtributoInt3 ();
 }
 
 void Veiculos::setProximoCliente(ListasDataNodo* newProximoCliente){
-  setProximoNodo (newProximoCliente);
+  ListaDataNodo::setProximoNodo (newProximoCliente);
 }
 
 ListaDataNodo* Veiculos::getProximoCliente(){
-  return getProximoNodo ();
+  return ListaDataNodo::getProximoNodo ();
 }
 
-ListaDataNodo* criarVeiculo(ListaDataNodo* listaVeiculos){
-  ListaDataNodo* criarNodo(ListaDataNodo* listaVeiculos);
+ListaDataNodo* Veiculos::criarVeiculo(ListaDataNodo* listaVeiculos){
+  ListaDataNodo::criarNodo(ListaDataNodo* listaVeiculos);
 }
 
-Void apagaCliente(ListaDataNodo* veiculo){
-  Void apagaNodo(ListaDataNodo* veiculo);
+void Veiculos::apagaCliente(ListaDataNodo* veiculo){
+  ListaDataNodo::apagaNodo(ListaDataNodo* veiculo);
 }

@@ -1,7 +1,10 @@
 #include  <iostream>
 #include  <string>
+#include  "ListasDataNodo.h"
 
-class Pedidos : protected  ListasDataNodo{
+using namespace std;
+
+class Pedidos : protected  ListaDataNodo{
        
   public:
   
@@ -17,10 +20,10 @@ class Pedidos : protected  ListasDataNodo{
     void setCusto(int newCusto);
     int getCusto();
     
-    void setClientePedido(string newCliente, Clientes *listaClientes);
+    void setClientePedido(string newCliente, ListaDataNodo* listaClientes);
     void getClientePedido();
     
-    void setVeiculoPedido(string newTipo, Veiculos *listaVeiculos);
+    void setVeiculoPedido(string newTipo, ListaDataNodo* listaVeiculos);
     void getVeiculoPedido();
     
     ListaDataNodo* criarPedido(ListaDataNodo* listaPedidos);

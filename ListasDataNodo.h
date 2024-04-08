@@ -1,7 +1,9 @@
 #include  <iostream>
 #include  <string>
 
-class ListasDataNodo (){
+using namespace std;
+
+class ListaDataNodo{
 
   private:
   
@@ -10,8 +12,8 @@ class ListasDataNodo (){
     int atributoInt3;//Clientes::           ; Veiculos::Chassi                    ; Pedidos:: Ano;
     int atributoInt4;//Clientes::           ; Veiculos::                          ; Pedidos:: ;
     
-    String atributoString1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
-    String atributoString2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
+    string atributoString1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
+    string atributoString2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
     
     ListaDataNodo* atributoNodo1;//Clientes::           ; Veiculos::                          ; Pedidos:: Cliente;
     ListaDataNodo* atributoNodo2;//Clientes::           ; Veiculos::                          ; Pedidos:: Veiculo;
@@ -21,35 +23,35 @@ class ListasDataNodo (){
     
   protected:
   
-    int setAtributoInt1 (int newAtributoInt1);
-    void getAtributoInt1 ();
+    void setAtributoInt1 (int newAtributoInt1);
+    int getAtributoInt1 ();
     
-    int setAtributoInt2 (int newAtributoInt2);
-    void getAtributoInt2 ();
+    void setAtributoInt2 (int newAtributoInt2);
+    int getAtributoInt2 ();
     
-    int setAtributoInt3 (int newAtributoInt3);
-    void getAtributoInt3 ();
+    void setAtributoInt3 (int newAtributoInt3);
+    int getAtributoInt3 ();
     
-    int setAtributoInt4 (int newAtributoInt4);
-    void getAtributoInt4 ();
+    void setAtributoInt4 (int newAtributoInt4);
+    int getAtributoInt4 ();
     
-    String setAtributoString1 (int newAtributoString1);
-    void getAtributoString1 ();
+    void setAtributoString1 (int newAtributoString1);
+    string getAtributoString1 ();
     
-    String setAtributoString2 (int newAtributoString2);
-    void getAtributoString2 ();
+    void setAtributoString2 (int newAtributoString2);
+    string getAtributoString2 ();
     
-    ListaDataNodo* setProximoNodo (ListaDataNodo* newProximoNodo);
-    void getProximoNodo();
+    void setProximoNodo (ListaDataNodo* newProximoNodo);
+    ListaDataNodo* getProximoNodo();
     
-    ListaDataNodo* setAnteriorNodo (ListaDataNodo* newAnteriorNodo);
-    void getAnterior();
+    void setAnteriorNodo (ListaDataNodo* newAnteriorNodo);
+    ListaDataNodo* getAnteriorNodo();
     
     void setNodoCondicionalString(string newNodo, ListaDataNodo *listaNodos, int escolhaAtributo);
     
-    void getAtributoNodo1();
-    void getAtributoNodo2();
+    ListaDataNodo* getAtributoNodo1();
+    ListaDataNodo* getAtributoNodo2();
     
-    ListaDataNodo* criarNodo(ListaDataNodo* listaNodos);
-    Void apagaNodo(ListaDataNodo* nodo);
-}
+    void criarNodo(ListaDataNodo* listaNodos);
+    void apagaNodo(ListaDataNodo* nodo);
+};

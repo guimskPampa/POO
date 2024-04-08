@@ -1,7 +1,10 @@
 #include  <iostream>
 #include  <string>
+#include  "ListasDataNodo.h"
 
-class Clientes : protected ListasDataNodo{
+using namespace std;
+
+class Clientes : protected ListaDataNodo{
     
   public:
 
@@ -18,5 +21,5 @@ class Clientes : protected ListasDataNodo{
     ListaDataNodo* getProximoCliente();
     
     ListaDataNodo* criarCliente(ListaDataNodo* listaClientes);
-    Void apagaCliente(ListaDataNodo* cliente);
+    void apagaCliente(ListaDataNodo* cliente);
 };
