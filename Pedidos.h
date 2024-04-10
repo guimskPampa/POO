@@ -21,11 +21,11 @@ class Pedidos : protected  ListaDataNodo{
     int getCusto();
     
     void setClientePedido(string newCliente, ListaDataNodo* listaClientes);
-    void getClientePedido();
+    void getClientePedido(ListaDataNodo* cliente);
     
     void setVeiculoPedido(string newTipo, ListaDataNodo* listaVeiculos);
-    void getVeiculoPedido();
+    void getVeiculoPedido(ListaDataNodo* veiculo);
     
-    ListaDataNodo* criarPedido(ListaDataNodo* listaPedidos);
-    Void apagaPedido(ListaDataNodo* pedido);
+    void criarPedido(ListaDataNodo* listaPedidos);
+    void apagaPedido(ListaDataNodo* pedido);
 };

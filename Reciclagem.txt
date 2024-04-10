@@ -13,5 +13,19 @@
   pedido1.setAno(2012);
   pedido1.setCusto(10000);
   
--------------------------------
+--------------------------------
 
+ -------Mostrar Veiculo-------
+ 
+  cout << "Info Veiculo:\n" << "tipo: " << veiculo->getTipo();
+  cout << "\nCapacidade de carga: " << veiculo->getCapacidadeCarga();
+  cout << "\nAno de Fabricacao: "<< veiculo->getAnoFabricacao() << "\nChassi: "<< veiculo->getChassi();
+  
+  --------------------------------
+  
+   -------Mostrar Cliente-------
+   
+    cout << "Info Cliente:\n" << "Nome: " << cliente->getNome() << "\nidade: "<< cliente->getIdade();
+  cout << "\nendereco: "<< cliente->getEndereco();
+  
+  --------------------------------

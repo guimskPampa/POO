@@ -17,9 +17,9 @@ class Clientes : protected ListaDataNodo{
     void setEndereco(string newEndereco);
     string getEndereco();
     
-    void setProximoCliente(ListasDataNodo* newProximoCliente);
+    void setProximoCliente(ListaDataNodo* newProximoCliente);
     ListaDataNodo* getProximoCliente();
     
-    ListaDataNodo* criarCliente(ListaDataNodo* listaClientes);
+    void criarCliente(ListaDataNodo* listaClientes);
     void apagaCliente(ListaDataNodo* cliente);
 };

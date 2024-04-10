@@ -35,10 +35,10 @@ class ListaDataNodo{
     void setAtributoInt4 (int newAtributoInt4);
     int getAtributoInt4 ();
     
-    void setAtributoString1 (int newAtributoString1);
+    void setAtributoString1 (string newAtributoString1);
     string getAtributoString1 ();
     
-    void setAtributoString2 (int newAtributoString2);
+    void setAtributoString2 (string newAtributoString2);
     string getAtributoString2 ();
     
     void setProximoNodo (ListaDataNodo* newProximoNodo);

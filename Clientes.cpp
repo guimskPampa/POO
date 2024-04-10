@@ -1,46 +1,45 @@
 #include  <iostream>
 #include  <string>
 #include  "Clientes.h"
-#include  "ListasDataNodo.h"
 
 using namespace std;
 
 void Clientes::setIdade(int newIdade){
-  ListaDataNodo::setAtributoInt1 (newIdade);
+  setAtributoInt1 (newIdade);
 }
 
 int Clientes::getIdade(){
-  return ListaDataNodo::getAtributoInt1 ();
+  return getAtributoInt1 ();
 }
 
 void Clientes::setNome(string newNome){
-  ListaDataNodo::setAtributoString1 (newNome);
+  setAtributoString1 (newNome);
 }
 
 string Clientes::getNome(){
-  return ListaDataNodo::getAtributoString1 ();
+  return getAtributoString1 ();
 }
 
 void Clientes::setEndereco(string newEndereco){
-  ListaDataNodo::setAtributoString2 (newEndereco);
+  setAtributoString2 (newEndereco);
 }
 
 string Clientes::getEndereco(){
-  return ListaDataNodo::getAtributoString2 ();
+  return getAtributoString2 ();
 }
 
-void Clientes::setProximoCliente(ListasDataNodo* newProximoCliente){
-  ListaDataNodo::setProximoNodo (newProximoCliente);
+void Clientes::setProximoCliente(ListaDataNodo* newProximoCliente){
+  setProximoNodo (newProximoCliente);
 }
 
 ListaDataNodo* Clientes::getProximoCliente(){
-  return ListaDataNodo::getProximoNodo ();
+  return getProximoNodo ();
 }
 
-ListaDataNodo* Clientes::criarCliente(ListaDataNodo* listaClientes){
-  ListaDataNodo::criarNodo(ListaDataNodo* listaClientes);
+void Clientes::criarCliente(ListaDataNodo* listaClientes){
+  criarNodo(listaClientes);
 }
 
-Void Clientes::apagaCliente(ListaDataNodo* cliente){
-  ListaDataNodo::apagaNodo(ListaDataNodo* cliente);
+void Clientes::apagaCliente(ListaDataNodo* cliente){
+  apagaNodo(cliente);
 }

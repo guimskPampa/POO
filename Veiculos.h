@@ -1,5 +1,6 @@
 #include  <iostream>
 #include  <string>
+#include  "ListasDataNodo.h"
 
 using namespace std;
 
@@ -19,9 +20,9 @@ class Veiculos : protected ListaDataNodo{
     void setChassi(int newChassi);
     int getChassi();
     
-    void setProximoCliente(ListasDataNodo* newProximoCliente);
-    ListaDataNodo* getProximoCliente();
+    void setProximoVeiculo(ListaDataNodo* newProximoVeiculo);
+    ListaDataNodo* getProximoVeiculo();
     
-    ListaDataNodo* criarVeiculo(ListaDataNodo* listaVeiculos);
+    void criarVeiculo(ListaDataNodo* listaVeiculos);
     void apagaVeiculo(ListaDataNodo* veiculo);
 };

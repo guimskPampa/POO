@@ -85,9 +85,10 @@ ListaDataNodo*  ListaDataNodo::getAtributoNodo2(){
   return this->atributoNodo2;
 }
 
-ListaDataNodo* ListaDataNodo::criarNodo(ListaDataNodo* listaNodos){
-  
-  ListaDataNodo* ListaDataNodo::aux = new ListaDataNodo;
+void ListaDataNodo::criarNodo(ListaDataNodo* listaNodos){
+//mudar recebbimento assim como dito linha abaixo
+  //Recebe endereco e muda endereco apontado por ponteiro
+  ListaDataNodo* aux = new ListaDataNodo;
   
   if (listaNodos==NULL){
   aux->anteriorNodo = NULL;
@@ -95,12 +96,9 @@ ListaDataNodo* ListaDataNodo::criarNodo(ListaDataNodo* listaNodos){
   listaNodos = aux;
   }
   else{
-  aux->anteriorNodo = NULL;
-  aux->proximoNodo = listaNodos;
-  listaNodos->anteriorNodo = aux;
+  aux->anteriorNodo = listaNodos;
+  aux->proximoNodo = NULL;
   }
-  
-  return aux;
 }
 
 void ListaDataNodo::apagaNodo(ListaDataNodo* nodo){
