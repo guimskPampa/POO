@@ -34,18 +34,28 @@ int Veiculos::getChassi(){
   return getAtributoInt3 ();
 }
 
-void Veiculos::setProximoVeiculo(ListaDataNodo* newProximoVeiculo){
+void Veiculos::setProximoVeiculo(Nodo* newProximoVeiculo){
   setProximoNodo (newProximoVeiculo);
 }
 
-ListaDataNodo* Veiculos::getProximoVeiculo(){
+Nodo* Veiculos::getProximoVeiculo(){
   return getProximoNodo ();
 }
 
-void Veiculos::criarVeiculo(ListaDataNodo* listaVeiculos){
-  criarNodo(listaVeiculos);
+Veiculos:: Veiculo(Nodo* listaVeiculos){
+  string tipo;
+  int capacidadeCarga, anoFabricacao, chassi;
+  
+  cout << "escolha capacidade carga, anoFabricacao, chassi e tipo";
+  cin >> capacidadeCarga >> anoFabricacao >> chassi >> tipo;
+  
+  Nodo(listaVeiculos, capacidadeCarga, anoFabricacao, chassi, NULL, tipo, NULL, NULL, NULL);
 }
 
-void Veiculos::apagaVeiculo(ListaDataNodo* veiculo){
-  apagaNodo(veiculo);
+Veiculos::~Veiculo(Nodo* veiculo){
+  ~Nodo(veiculo);
+}
+
+void Veiculos::mostraVeiculo(Nodo* veiculo){
+  mostraNodoVeiculo(veiculo);
 }

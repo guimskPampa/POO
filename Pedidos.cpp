@@ -35,25 +35,34 @@ int Pedidos::getCusto(){
   return getAtributoInt4 ();
 }
     
-void Pedidos::setClientePedido(string newCliente, ListaDataNodo* listaClientes){
+void Pedidos::setClientePedido(string newCliente, Nodo* listaClientes){
   setNodoCondicionalString(newCliente, listaClientes, 1);
 }
 
-void Pedidos::setVeiculoPedido(string newVeiculo, ListaDataNodo* listaVeiculos){
+void Pedidos::setVeiculoPedido(string newVeiculo, Nodo* listaVeiculos){
   setNodoCondicionalString(newVeiculo, listaVeiculos, 2);
 }
 
-void Pedidos::getClientePedido(ListaDataNodo* cliente){
+Nodo* Pedidos::getClientePedido(){
+  return getAtributoNodo1();
 }
 
-void Pedidos::getVeiculoPedido(ListaDataNodo* veiculo){
+Nodo* Pedidos::getVeiculoPedido(){
+  return getAtributoNodo2();
 }
 
-void Pedidos::criarPedido(ListaDataNodo* pedido){
-  criarNodo(pedido);
+Pedidos:: Pedido(){
+  int ano, mes, dia, custo;
+  string cliente, veiculo;
+  cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
+  cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;
+  Nodo(listaPedidos, );
 }
 
-void Pedidos::apagaPedido(ListaDataNodo* pedido){
-  apagaNodo(pedido);
+Pedidos::~Pedido(Nodo* pedido){
+  ~Nodo(pedido, ano, mes, dia, custo, NULL, NULL, cliente, veiculo);
 }
-
+void Pedidos::mostraPedido(Nodo* veiculo, Nodo* cliente){
+  mostraNodoVeiculo(veiculo);
+  mostraNodoCliente(cliente);
+}

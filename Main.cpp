@@ -10,14 +10,6 @@ int main(){
   
   int escolhaClasse=1, escolhaFuncao=1;
   
-  ListaDataNodo* listaClientes = NULL;
-  ListaDataNodo* listaVeiculos = NULL;
-  ListaDataNodo* listaPedidos = NULL;
-  
-  listaClientes = criarCliente(ListaDataNodo* listaClientes);
-  listaVeiculos = criarVeiculo(ListaDataNodo* listaVeiculos);
-  listaPedidos = criarPedido(ListaDataNodo* listaPedidos);
-  
   while(escolhaClasse!=0&&escolhaFuncao!=0){
   
     cout<<"Escolha dentre as opcoes:\n";
@@ -34,10 +26,10 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          listaClientes = criarCliente(ListaDataNodo* listaClientes);
+          Nodo* listaClientes = new Cliente(ListaDataNodo* listaClientes);
         }
         else if (escolhaFuncao == 2){
-          listaClientes = apagaCliente(ListaDataNodo* cliente);
+          Nodo* listaClientes = ~Cliente(ListaDataNodo* cliente);
         }
         else if (escolhaFuncao == 3){
     
@@ -49,10 +41,10 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        listaVeiculos = criarVeiculo(ListaDataNodo* listaVeiculos);
+        Nodo* listaVeiculos = new Veiculo(Nodo* listaVeiculos);
       }
       else if (escolhaFuncao == 2){
-        listaVeiculos = apagaVeiculo(ListaDataNodo* veiculo);
+        Nodo* listaVeiculos = ~Veiculo(Nodo* veiculo);
       }
       else if (escolhaFuncao == 3){
   
@@ -64,10 +56,10 @@ int main(){
     case 3:
   
      if (escolhaFuncao == 1){
-        listaPedidos = criarPedido(ListaDataNodo* listaPedidos);
+        Nodo* listaPedidos = new Pedido(Nodo* listaPedidos);
       }
       else if (escolhaFuncao == 2){
-        listaPedidos = apagaPedido(ListaDataNodo* pedido);
+        Nodo* listaPedidos = ~Pedido(Nodo* pedido);
       }
       else if (escolhaFuncao == 3){
   

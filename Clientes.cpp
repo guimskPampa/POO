@@ -28,18 +28,27 @@ string Clientes::getEndereco(){
   return getAtributoString2 ();
 }
 
-void Clientes::setProximoCliente(ListaDataNodo* newProximoCliente){
+void Clientes::setProximoCliente(Nodo* newProximoCliente){
   setProximoNodo (newProximoCliente);
 }
 
-ListaDataNodo* Clientes::getProximoCliente(){
+Nodo* Clientes::getProximoCliente(){
   return getProximoNodo ();
 }
 
-void Clientes::criarCliente(ListaDataNodo* listaClientes){
-  criarNodo(listaClientes);
+Clientes::Cliente(Nodo* listaClientes){
+  int idade;
+  string nome, endereco;
+  cout<< "Digite idade, nome e endereco do novo cliente:\n";
+  cin >> idade >> nome >> endereco;
+  
+  Nodo(listaClientes, idade, NULL, NULL, NULL, nome, endereco, NULL, NULL);
 }
 
-void Clientes::apagaCliente(ListaDataNodo* cliente){
-  apagaNodo(cliente);
+Clientes::~Cliente(Nodo* cliente){
+  ~Nodo(cliente);
+}
+
+void Clientes::mostraCliente(Nodo* cliente){
+  mostraNodoCliente(cliente);
 }

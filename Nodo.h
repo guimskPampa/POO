@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class ListaDataNodo{
+class Nodo{
 
   private:
   
@@ -15,43 +15,46 @@ class ListaDataNodo{
     string atributoString1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
     string atributoString2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
     
-    ListaDataNodo* atributoNodo1;//Clientes::           ; Veiculos::                          ; Pedidos:: Cliente;
-    ListaDataNodo* atributoNodo2;//Clientes::           ; Veiculos::                          ; Pedidos:: Veiculo;
+    Nodo* atributoNodo1;//Clientes::           ; Veiculos::                          ; Pedidos:: Cliente;
+    Nodo* atributoNodo2;//Clientes::           ; Veiculos::                          ; Pedidos:: Veiculo;
     
-    ListaDataNodo* proximoNodo;
-    ListaDataNodo* anteriorNodo;
+    Nodo* proximoNodo;
+    Nodo* anteriorNodo;
     
   protected:
   
     void setAtributoInt1 (int newAtributoInt1);
-    int getAtributoInt1 ();
+    int getAtributoInt1 () const;
     
     void setAtributoInt2 (int newAtributoInt2);
-    int getAtributoInt2 ();
+    int getAtributoInt2 () const;
     
     void setAtributoInt3 (int newAtributoInt3);
-    int getAtributoInt3 ();
+    int getAtributoInt3 () const;
     
     void setAtributoInt4 (int newAtributoInt4);
-    int getAtributoInt4 ();
+    int getAtributoInt4 () const;
     
     void setAtributoString1 (string newAtributoString1);
-    string getAtributoString1 ();
+    string getAtributoString1 () const;
     
     void setAtributoString2 (string newAtributoString2);
-    string getAtributoString2 ();
+    string getAtributoString2 () const;
     
-    void setProximoNodo (ListaDataNodo* newProximoNodo);
-    ListaDataNodo* getProximoNodo();
+    void setProximoNodo (Nodo* newProximoNodo);
+    Nodo* getProximoNodo() const;
     
-    void setAnteriorNodo (ListaDataNodo* newAnteriorNodo);
-    ListaDataNodo* getAnteriorNodo();
+    void setAnteriorNodo (Nodo* newAnteriorNodo);
+    Nodo* getAnteriorNodo() const;
     
-    void setNodoCondicionalString(string newNodo, ListaDataNodo *listaNodos, int escolhaAtributo);
+    void setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo);
     
-    ListaDataNodo* getAtributoNodo1();
-    ListaDataNodo* getAtributoNodo2();
+    Nodo* getAtributoNodo1() const;
+    Nodo* getAtributoNodo2() const;
     
-    void criarNodo(ListaDataNodo* listaNodos);
-    void apagaNodo(ListaDataNodo* nodo);
+    Nodo(Nodo* listaNodos);
+    ~Nodo(Nodo* nodo);
+    
+    void mostraNodoVeiculo(Nodo* veiculo) const;
+    void mostraNodoCliente(Nodo* cliente) const;
 };
