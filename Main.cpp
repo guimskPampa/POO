@@ -1,8 +1,8 @@
 #include  <iostream>
 #include  <string>
-#include  "Clientes.h"
-#include  "Veiculos.h"
-#include  "Pedidos.h"
+#include  "Clientes/Cliente.h"
+#include  "Veiculos/Veiculo.h"
+#include  "Pedidos/Pedido.h"
 
 using namespace std;
 

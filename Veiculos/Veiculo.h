@@ -1,30 +1,30 @@
 #include  <iostream>
 #include  <string>
-#include  "Nodo.h"
+#include  "../Nodos/Nodo.h"
 
 using namespace std;
 
-class Veiculos : protected Nodo{
+class Veiculo : protected Nodo{
 
   public:
   
     void setTipo(string newTipo);
-    string getTipo() const;
+    string getTipo();
      
     void setCapacidadeCarga(int newCapacidadeCarga);
-    int getCapacidadeCarga() const;
+    int getCapacidadeCarga();
     
     void setAnoFabricacao(int newAnoFabricacao);
-    int getAnoFabricacao() const;
+    int getAnoFabricacao();
     
     void setChassi(int newChassi);
     int getChassi() const;
     
     void setProximoVeiculo(Nodo* newProximoVeiculo);
-    Nodo* getProximoVeiculo() const;
+    Nodo* getProximoVeiculo();
     
     Veiculo(Nodo* listaVeiculos);
-    ~Veiculo(Nodo* veiculo);
+    ~Veiculo();
     
-    void mostraVeiculo(Nodo* nodo) const;
+    void mostraVeiculo();
 };

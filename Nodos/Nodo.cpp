@@ -53,6 +53,14 @@ Nodo* Nodo::getAnteriorNodo(){
   return this->anteriorNodo;
 }
 
+void Nodo::setAtributoNodo1 (Nodo* newNodo){
+  this->atributoNodo1 = newNodo;
+}
+
+void Nodo::setAtributoNodo2(Nodo* newNodo){
+  this->atributoNodo2 = newNodo;
+}
+
 void Nodo::setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo){
 
   Nodo* aux = listaNodos;
@@ -85,11 +93,10 @@ Nodo* Nodo::getAtributoNodo2(){
   return this->atributoNodo2;
 }
 
-Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2){
+Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2){
 //mudar recebbimento assim como dito linha abaixo
   //Recebe endereco e muda endereco apontado por ponteiro
-  Nodo* newNodo = new Nodo;
-  
+  Nodo* newNodo;
   if (listaNodos==NULL){
   newNodo->anteriorNodo = NULL;
   newNodo->proximoNodo = NULL;
@@ -107,25 +114,25 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   newNodo->setAtributoString1(newString1);
   newNodo->setAtributoString2(newString2);
   
-  newNodo->setAtributoNodo1(newNodo1);
-  newNodo->setAtributoNodo2(newNodo2);
+  newNodo->setAtributoNodo1(newPonteiro1);
+  newNodo->setAtributoNodo2(newPonteiro2);
 }
 
-Nodo::~Nodo(Nodo* nodo){
+Nodo::~Nodo(){
   Nodo* aux;
-  aux = nodo->anteriorNodo;
-  nodo->proximoNodo->anteriorNodo = aux;
-  delete nodo;
+  aux = this->anteriorNodo;
+  this->proximoNodo->anteriorNodo = aux;
+  delete this;
 }
 
-void Nodo::mostraNodoCliente(Nodo* cliente){
-  cout << "Info Cliente:\n" << "Nome: " << cliente->getAtributoString1() << "\nidade: \n"<< cliente->getAtributoInt1();
-  cout << "\nendereco: "<< cliente->getAtributoString2();
+void Nodo::mostraNodoCliente(){
+  cout << "Info Cliente:\n" << "Nome: " << this->getAtributoString1() << "\nidade: \n"<< this->getAtributoInt1();
+  cout << "\nendereco: "<< this->getAtributoString2();
 }
 
-void Nodo::mostraNodoVeiculo(Nodo* veiculo){
-  cout << "Info Veiculo:\n" << "tipo: " << veiculo->getAtributoString1();
-  cout << "\nCapacidade de carga: " << veiculo->getAtributoInt1();
-  cout << "\nAno de Fabricacao: "<< veiculo->getAtributoInt2() << "\nChassi: \n"<< veiculo->getAtributoInt3();
+void Nodo::mostraNodoVeiculo(){
+  cout << "Info Veiculo:\n" << "tipo: " << this->getAtributoString1();
+  cout << "\nCapacidade de carga: " << this->getAtributoInt1();
+  cout << "\nAno de Fabricacao: "<< this->getAtributoInt2() << "\nChassi: \n"<< this->getAtributoInt3();
 }
 

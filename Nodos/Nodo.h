@@ -24,37 +24,39 @@ class Nodo{
   protected:
   
     void setAtributoInt1 (int newAtributoInt1);
-    int getAtributoInt1 () const;
+    int getAtributoInt1 ();
     
     void setAtributoInt2 (int newAtributoInt2);
-    int getAtributoInt2 () const;
+    int getAtributoInt2 ();
     
     void setAtributoInt3 (int newAtributoInt3);
-    int getAtributoInt3 () const;
+    int getAtributoInt3 ();
     
     void setAtributoInt4 (int newAtributoInt4);
-    int getAtributoInt4 () const;
+    int getAtributoInt4 ();
     
     void setAtributoString1 (string newAtributoString1);
-    string getAtributoString1 () const;
+    string getAtributoString1 ();
     
     void setAtributoString2 (string newAtributoString2);
-    string getAtributoString2 () const;
+    string getAtributoString2 ();
     
     void setProximoNodo (Nodo* newProximoNodo);
-    Nodo* getProximoNodo() const;
+    Nodo* getProximoNodo();
     
     void setAnteriorNodo (Nodo* newAnteriorNodo);
-    Nodo* getAnteriorNodo() const;
+    Nodo* getAnteriorNodo();
     
+    void setAtributoNodo1 (Nodo* newNodo);
+    void setAtributoNodo2 (Nodo* newNodo);
     void setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo);
     
-    Nodo* getAtributoNodo1() const;
-    Nodo* getAtributoNodo2() const;
+    Nodo* getAtributoNodo1();
+    Nodo* getAtributoNodo2();
     
-    Nodo(Nodo* listaNodos);
-    ~Nodo(Nodo* nodo);
+    Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
+    ~Nodo();
     
-    void mostraNodoVeiculo(Nodo* veiculo) const;
-    void mostraNodoCliente(Nodo* cliente) const;
+    void mostraNodoVeiculo();
+    void mostraNodoCliente();
 };

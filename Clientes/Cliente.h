@@ -1,27 +1,27 @@
 #include  <iostream>
 #include  <string>
-#include  "Nodo.h"
+#include  "../Nodos/Nodo.h"
 
 using namespace std;
 
-class Clientes : protected Nodo{
+class Cliente : protected Nodo{
     
   public:
 
     void setIdade(int minhaIdade);
-    int getIdade() const;
+    int getIdade();
 
     void setNome(string nome);
-    string getNome() const;
+    string getNome();
      
     void setEndereco(string newEndereco);
-    string getEndereco() const;
+    string getEndereco();
     
     void setProximoCliente(Nodo* newProximoCliente);
-    Nodo* getProximoCliente() const;
+    Nodo* getProximoCliente();
     
     Cliente(Nodo* listaClientes);
-    ~Cliente(Nodo* cliente);
+    ~Cliente();
     
-    void mostraCliente(Nodo* nodo) const;
+    void mostraCliente();
 };

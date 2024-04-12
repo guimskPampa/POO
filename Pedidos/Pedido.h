@@ -1,33 +1,33 @@
 #include  <iostream>
 #include  <string>
-#include  "Nodo.h"
+#include  "../Nodos/Nodo.h"
 
 using namespace std;
 
-class Pedidos : protected  Nodo{
+class Pedido : protected  Nodo{
        
   public:
   
     void setDia(int newDia);
-    int getDia() const;
+    int getDia();
 
     void setMes(int newMes);
-    int getMes() const;
+    int getMes();
     
     void setAno(int newAno);
-    int getAno() const;
+    int getAno();
     
     void setCusto(int newCusto);
-    int getCusto() const;
+    int getCusto();
     
     void setClientePedido(string newCliente, Nodo* listaClientes);
-    Nodo* getClientePedido(Nodo* pedido) const;
+    Nodo* getClientePedido();
     
     void setVeiculoPedido(string newTipo, Nodo* listaVeiculos);
-    Nodo* getVeiculoPedido(Nodo* pedido) const;
+    Nodo* getVeiculoPedido();
     
     Pedido(Nodo* listaPedidos);
-    ~Pedido(Nodo* pedido);
+    ~Pedido();
     
-    void mostraPedido(Nodo* veiculo, Nodo* cliente) const;
+    void mostraPedido();
 };
