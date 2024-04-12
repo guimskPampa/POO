@@ -94,28 +94,26 @@ Nodo* Nodo::getAtributoNodo2(){
 }
 
 Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2){
-//mudar recebbimento assim como dito linha abaixo
-  //Recebe endereco e muda endereco apontado por ponteiro
-  Nodo* newNodo;
+
   if (listaNodos==NULL){
-  newNodo->anteriorNodo = NULL;
-  newNodo->proximoNodo = NULL;
-  listaNodos = newNodo;
+  this->anteriorNodo = NULL;
+  this->proximoNodo = NULL;
+  listaNodos = this;
   }
   else{
-  newNodo->anteriorNodo = listaNodos;
-  newNodo->proximoNodo = NULL;
+  this->anteriorNodo = listaNodos;
+  this->proximoNodo = NULL;
   }
-  newNodo->setAtributoInt1(newInt1);
-  newNodo->setAtributoInt1(newInt2);
-  newNodo->setAtributoInt1(newInt3);
-  newNodo->setAtributoInt1(newInt4);
+  this->setAtributoInt1(newInt1);
+  this->setAtributoInt1(newInt2);
+  this->setAtributoInt1(newInt3);
+  this->setAtributoInt1(newInt4);
   
-  newNodo->setAtributoString1(newString1);
-  newNodo->setAtributoString2(newString2);
+  this->setAtributoString1(newString1);
+  this->setAtributoString2(newString2);
   
-  newNodo->setAtributoNodo1(newPonteiro1);
-  newNodo->setAtributoNodo2(newPonteiro2);
+  this->setAtributoNodo1(newPonteiro1);
+  this->setAtributoNodo2(newPonteiro2);
 }
 
 Nodo::~Nodo(){

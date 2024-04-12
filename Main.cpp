@@ -1,14 +1,23 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #include  <iostream>
 #include  <string>
 #include  "Clientes/Cliente.h"
 #include  "Veiculos/Veiculo.h"
 #include  "Pedidos/Pedido.h"
+#include "Nodos/Nodo.h"
+
 
 using namespace std;
 
 int main(){
   
   int escolhaClasse=1, escolhaFuncao=1;
+  
+  Nodo* listaClientes = new Cliente(listaClientes);
+  Nodo* listaVeiculos = new Veiculo(listaVeiculos);
+  Nodo* listaPedidos = new Pedido(listaPedidos);
   
   while(escolhaClasse!=0&&escolhaFuncao!=0){
   
@@ -26,10 +35,10 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          Nodo* listaClientes = new Cliente(ListaDataNodo* listaClientes);
+          Nodo* listaClientes = new Cliente(listaClientes);
         }
         else if (escolhaFuncao == 2){
-          Nodo* listaClientes = ~Cliente(ListaDataNodo* cliente);
+          listaClientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
         }
         else if (escolhaFuncao == 3){
     
@@ -41,31 +50,31 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        Nodo* listaVeiculos = new Veiculo(Nodo* listaVeiculos);
+        Nodo* listaVeiculos = new Veiculo(listaVeiculos);
       }
       else if (escolhaFuncao == 2){
-        Nodo* listaVeiculos = ~Veiculo(Nodo* veiculo);
+        listaVeiculos->~Veiculo();
       }
       else if (escolhaFuncao == 3){
   
       }
       else{
-          return 0
+          return 0;
         }
         
     case 3:
   
      if (escolhaFuncao == 1){
-        Nodo* listaPedidos = new Pedido(Nodo* listaPedidos);
+        Nodo* listaPedidos = new Pedido(listaPedidos);
       }
       else if (escolhaFuncao == 2){
-        Nodo* listaPedidos = ~Pedido(Nodo* pedido);
+        listaPedidos->~Pedido();
       }
       else if (escolhaFuncao == 3){
   
       }
       else{
-          return 0
+          return 0;
         }
         
   }
@@ -73,6 +82,6 @@ int main(){
   
   return 0;
 }
-
+#endif
 
 

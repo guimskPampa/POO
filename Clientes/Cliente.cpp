@@ -42,7 +42,7 @@ Cliente::Cliente(Nodo* listaClientes){
   cout<< "Digite idade, nome e endereco do novo cliente:\n";
   cin >> idade >> nome >> endereco;
   
-  Nodo(listaClientes, idade, NULL, NULL, NULL, nome, endereco, NULL, NULL);
+  this->Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL);
 }
 
 Cliente::~Cliente(){

@@ -1,11 +1,14 @@
+#ifndef VEICULO_H
+#define VEICULO_H
+
 #include  <iostream>
 #include  <string>
-#include  "../Nodos/Nodo.h"
+#include "../Nodos/Nodo.h"
+
 
 using namespace std;
-
+  
 class Veiculo : protected Nodo{
-
   public:
   
     void setTipo(string newTipo);
@@ -28,3 +31,5 @@ class Veiculo : protected Nodo{
     
     void mostraVeiculo();
 };
+
+#endif

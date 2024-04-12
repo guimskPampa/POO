@@ -51,18 +51,16 @@ Nodo* Pedido::getVeiculoPedido(){
   return this->getAtributoNodo2();
 }
 
-Pedido:: Pedido(Nodo* listaPedidos){
-  int ano, mes, dia, custo;
-  string cliente, veiculo;
-  cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
-  cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;
-  Nodo(listaPedidos, ano, mes, dia, custo, NULL, NULL, cliente, veiculo);
+Pedido:: Pedido(Nodo* listaPedidos,int ano,int mes,int dia,int custo,string nulo1,string nulo2,Nodo* cliente,Nodo* veiculo){
+  //cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
+  //cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;
+  Nodo(listaPedidos, ano, mes, dia, custo, nulo1, nulo2, cliente, veiculo);
 }
 
 Pedido::~Pedido(){
   this->~Nodo();
 }
 void Pedido::mostraPedido(){
-  this->mostraNodoVeiculo(this->getVeiculoPedido());
-  this->mostraNodoCliente(this->getClientePedido());
+  this->mostraNodoVeiculo();
+  this->mostraNodoCliente();
 }

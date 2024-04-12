@@ -29,3 +29,5 @@
   cout << "\nendereco: "<< cliente->getEndereco();
   
   --------------------------------
+   //cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
+  //cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;

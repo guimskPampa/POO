@@ -1,6 +1,11 @@
+#ifndef PEDIDO_H
+#define PEDIDO_H 
+
 #include  <iostream>
 #include  <string>
-#include  "../Nodos/Nodo.h"
+#include "../Nodos/Nodo.h"
+
+
 
 using namespace std;
 
@@ -26,8 +31,9 @@ class Pedido : protected  Nodo{
     void setVeiculoPedido(string newTipo, Nodo* listaVeiculos);
     Nodo* getVeiculoPedido();
     
-    Pedido(Nodo* listaPedidos);
+    Pedido(Nodo* listaPedidos,int ano,int mes,int dia,int custo,string nulo1,string nulo2,Nodo* cliente,Nodo* veiculo);
     ~Pedido();
     
     void mostraPedido();
 };
+#endif

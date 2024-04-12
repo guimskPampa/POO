@@ -1,6 +1,9 @@
+#ifndef CLIENTE_H
+#define CLIENTE_H
+
 #include  <iostream>
 #include  <string>
-#include  "../Nodos/Nodo.h"
+#include "../Nodos/Nodo.h"
 
 using namespace std;
 
@@ -25,3 +28,5 @@ class Cliente : protected Nodo{
     
     void mostraCliente();
 };
+
+#endif
