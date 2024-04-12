@@ -1,6 +1,6 @@
 # Definição de variáveis
 EXECUTAVEL := main.exe
-SOURCES := main.cpp Includes/Veiculos.cpp Includes/Clientes.cpp Includes/Pedidos.cpp Includes/Caminhao.cpp Includes/PrintaFormulario.cpp
+SOURCES := Main.cpp Veiculos/Veiculo.cpp Clientes/Cliente.cpp Pedidos/Pedido.cpp Nodos/Nodo.cpp
 
 # Regras
 all: $(EXECUTAVEL)
