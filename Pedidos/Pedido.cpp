@@ -51,7 +51,7 @@ Nodo* Pedido::getVeiculoPedido(){
   return this->getAtributoNodo2();
 }
 
-Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, cliente, veiculo)
+Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo)
        :Nodo(listaNodo, ano, mes, dia, custo, "", "", cliente, veiculo){
   
   //cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
@@ -59,7 +59,7 @@ Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, cliente, v
 }
 
 Pedido::~Pedido(){
-  this->~Nodo();
+  delete this;
 }
 void Pedido::mostraPedido(){
   this->mostraNodoVeiculo();

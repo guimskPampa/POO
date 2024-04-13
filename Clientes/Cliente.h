@@ -26,8 +26,8 @@ class Cliente : protected Nodo{
     void setProximoCliente(Nodo* newProximoCliente);
     Nodo* getProximoCliente();
     
-    Cliente(int idade, string nome, string endereco);
-    ~Cliente();
+    Cliente(Nodo* listaNodo, int idade, string nome, string endereco);
+    virtual ~Cliente();
     
     void mostraCliente();
 };

@@ -46,7 +46,7 @@ Cliente::Cliente(Nodo* listaNodo, int idade, string nome, string endereco)
 }
 
 Cliente::~Cliente(){
- this->~Nodo();
+ delete this;
 }
 
 void Cliente::mostraCliente(){

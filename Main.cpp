@@ -17,7 +17,7 @@ int main(){
   Nodo* listaClientes = NULL, * listaVeiculos = NULL, * listaPedidos = NULL;
   
   Cliente* clientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
-  Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3);
+  Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
   Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
   
   while(escolhaClasse!=0&&escolhaFuncao!=0){
@@ -36,11 +36,11 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          Cliente* listaClientes = new Cliente(15, "Jonatan", "Alegrete");
+          Cliente* clientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
           //Usa castinga para transformar Nodo* em cliente*
         }
         else if (escolhaFuncao == 2){
-          listaClientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
+          clientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
         }
         else if (escolhaFuncao == 3){
     
@@ -52,10 +52,10 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3);
+        Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
       }
       else if (escolhaFuncao == 2){
-        listaVeiculos->~Veiculo();
+        veiculos->~Veiculo();
       }
       else if (escolhaFuncao == 3){
   
@@ -70,7 +70,7 @@ int main(){
         Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
       }
       else if (escolhaFuncao == 2){
-        listaPedidos->~Pedido();
+        pedidos->~Pedido();
       }
       else if (escolhaFuncao == 3){
   

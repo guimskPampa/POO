@@ -116,7 +116,7 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   this->setAtributoNodo2(newPonteiro2);
 }
 
-Nodo::~Nodo(){
+  Nodo::~Nodo(){
   Nodo* aux;
   aux = this->anteriorNodo;
   this->proximoNodo->anteriorNodo = aux;

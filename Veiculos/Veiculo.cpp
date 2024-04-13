@@ -42,15 +42,15 @@ Nodo* Veiculo::getProximoVeiculo(){
   return this->getProximoNodo ();
 }
 
-Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi)
-        :Nodo(listaNodo, capacidadeCarga, anoFabricacao, chassi, 0, tipo, "", NULL ptr, NULL ptr){
+Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo)
+        :Nodo(listaNodo, capacidadeCarga, anoFabricacao, chassi, 0, tipo, "", NULL, NULL){
   
   //cout << "escolha capacidade carga, anoFabricacao, chassi e tipo";
   //cin >> capacidadeCarga >> anoFabricacao >> chassi >> tipo; 
 }
 
 Veiculo::~Veiculo(){
-  this->~Nodo();
+  delete this;
 }
 
 void Veiculo::mostraVeiculo(){

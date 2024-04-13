@@ -23,13 +23,13 @@ class Veiculo : protected Nodo{
     int getAnoFabricacao();
     
     void setChassi(int newChassi);
-    int getChassi() const;
+    int getChassi();
     
     void setProximoVeiculo(Nodo* newProximoVeiculo);
     Nodo* getProximoVeiculo();
     
-    Veiculo();
-    ~Veiculo();
+    Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo);
+    virtual ~Veiculo();
     
     void mostraVeiculo();
 };

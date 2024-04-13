@@ -59,7 +59,7 @@ class Nodo{
     Nodo* getAtributoNodo2();
     
     Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
-    ~Nodo();
+    virtual ~Nodo();
     
     void mostraNodoVeiculo();
     void mostraNodoCliente();

@@ -34,8 +34,8 @@ class Pedido : protected  Nodo{
     void setVeiculoPedido(string newTipo, Nodo* listaVeiculos);
     Nodo* getVeiculoPedido();
     
-    Pedido();
-    ~Pedido();
+    Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo);
+    virtual ~Pedido();
     
     void mostraPedido();
 };
