@@ -51,10 +51,11 @@ Nodo* Pedido::getVeiculoPedido(){
   return this->getAtributoNodo2();
 }
 
-Pedido:: Pedido(Nodo* listaPedidos,int ano,int mes,int dia,int custo,string nulo1,string nulo2,Nodo* cliente,Nodo* veiculo){
+Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, cliente, veiculo)
+       :Nodo(listaNodo, ano, mes, dia, custo, "", "", cliente, veiculo){
+  
   //cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
   //cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;
-  Nodo(listaPedidos, ano, mes, dia, custo, nulo1, nulo2, cliente, veiculo);
 }
 
 Pedido::~Pedido(){

@@ -42,14 +42,11 @@ Nodo* Veiculo::getProximoVeiculo(){
   return this->getProximoNodo ();
 }
 
-Veiculo:: Veiculo(Nodo* listaVeiculos){
-  string tipo;
-  int capacidadeCarga, anoFabricacao, chassi;
+Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi)
+        :Nodo(listaNodo, capacidadeCarga, anoFabricacao, chassi, 0, tipo, "", NULL ptr, NULL ptr){
   
-  cout << "escolha capacidade carga, anoFabricacao, chassi e tipo";
-  cin >> capacidadeCarga >> anoFabricacao >> chassi >> tipo;
-  
-  Nodo(listaVeiculos, capacidadeCarga, anoFabricacao, chassi, NULL, tipo, NULL, NULL, NULL);
+  //cout << "escolha capacidade carga, anoFabricacao, chassi e tipo";
+  //cin >> capacidadeCarga >> anoFabricacao >> chassi >> tipo; 
 }
 
 Veiculo::~Veiculo(){

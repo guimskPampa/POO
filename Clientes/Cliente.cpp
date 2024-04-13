@@ -36,13 +36,13 @@ Nodo* Cliente::getProximoCliente(){
   return this->getProximoNodo ();
 }
 
-Cliente::Cliente(Nodo* listaClientes){
-  int idade;
-  string nome, endereco;
-  cout<< "Digite idade, nome e endereco do novo cliente:\n";
-  cin >> idade >> nome >> endereco;
+Cliente::Cliente(Nodo* listaNodo, int idade, string nome, string endereco)
+        :Nodo(listaNodo, idade, 0, 0, 0, nome, endereco, NULL, NULL){
+
+  //cout<< "Digite idade, nome e endereco do novo cliente:\n";
+  //cin >> idade >> nome >> endereco;
+  //(listaNodosClientes, 1,2,3,4,"g","f", teste1, teste2)
   
-  this->Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL);
 }
 
 Cliente::~Cliente(){

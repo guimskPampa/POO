@@ -14,10 +14,11 @@ using namespace std;
 int main(){
   
   int escolhaClasse=1, escolhaFuncao=1;
+  Nodo* listaClientes = NULL, * listaVeiculos = NULL, * listaPedidos = NULL;
   
-  Nodo* listaClientes = new Cliente(listaClientes);
-  Nodo* listaVeiculos = new Veiculo(listaVeiculos);
-  Nodo* listaPedidos = new Pedido(listaPedidos);
+  Cliente* clientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
+  Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3);
+  Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
   
   while(escolhaClasse!=0&&escolhaFuncao!=0){
   
@@ -35,7 +36,8 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          Nodo* listaClientes = new Cliente(listaClientes);
+          Cliente* listaClientes = new Cliente(15, "Jonatan", "Alegrete");
+          //Usa castinga para transformar Nodo* em cliente*
         }
         else if (escolhaFuncao == 2){
           listaClientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
@@ -44,13 +46,13 @@ int main(){
     
         }
         else{
-          return 0
+          return 0;
         }
         
     case 2:
     
       if (escolhaFuncao == 1){
-        Nodo* listaVeiculos = new Veiculo(listaVeiculos);
+        Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3);
       }
       else if (escolhaFuncao == 2){
         listaVeiculos->~Veiculo();
@@ -65,7 +67,7 @@ int main(){
     case 3:
   
      if (escolhaFuncao == 1){
-        Nodo* listaPedidos = new Pedido(listaPedidos);
+        Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
       }
       else if (escolhaFuncao == 2){
         listaPedidos->~Pedido();
@@ -75,8 +77,8 @@ int main(){
       }
       else{
           return 0;
-        }
-        
+      }
+    }  
   }
   
   

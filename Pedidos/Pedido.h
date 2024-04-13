@@ -10,7 +10,10 @@
 using namespace std;
 
 class Pedido : protected  Nodo{
-       
+  private:
+  
+    Nodo* listaNodo;
+    
   public:
   
     void setDia(int newDia);
@@ -31,7 +34,7 @@ class Pedido : protected  Nodo{
     void setVeiculoPedido(string newTipo, Nodo* listaVeiculos);
     Nodo* getVeiculoPedido();
     
-    Pedido(Nodo* listaPedidos,int ano,int mes,int dia,int custo,string nulo1,string nulo2,Nodo* cliente,Nodo* veiculo);
+    Pedido();
     ~Pedido();
     
     void mostraPedido();

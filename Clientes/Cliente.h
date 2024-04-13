@@ -6,9 +6,12 @@
 #include "../Nodos/Nodo.h"
 
 using namespace std;
-
 class Cliente : protected Nodo{
-    
+
+  private:
+  
+    Nodo* listaNodo = NULL;
+  
   public:
 
     void setIdade(int minhaIdade);
@@ -23,7 +26,7 @@ class Cliente : protected Nodo{
     void setProximoCliente(Nodo* newProximoCliente);
     Nodo* getProximoCliente();
     
-    Cliente(Nodo* listaClientes);
+    Cliente(int idade, string nome, string endereco);
     ~Cliente();
     
     void mostraCliente();

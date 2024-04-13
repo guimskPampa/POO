@@ -9,6 +9,8 @@
 using namespace std;
   
 class Veiculo : protected Nodo{
+  private:
+    Nodo* listaNodo;
   public:
   
     void setTipo(string newTipo);
@@ -26,7 +28,7 @@ class Veiculo : protected Nodo{
     void setProximoVeiculo(Nodo* newProximoVeiculo);
     Nodo* getProximoVeiculo();
     
-    Veiculo(Nodo* listaVeiculos);
+    Veiculo();
     ~Veiculo();
     
     void mostraVeiculo();

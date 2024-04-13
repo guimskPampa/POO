@@ -101,8 +101,8 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   listaNodos = this;
   }
   else{
-  this->anteriorNodo = listaNodos;
-  this->proximoNodo = NULL;
+  this->anteriorNodo = NULL;
+  this->proximoNodo = listaNodos;
   }
   this->setAtributoInt1(newInt1);
   this->setAtributoInt1(newInt2);
