@@ -43,7 +43,7 @@ int main(){
           clientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
         }
         else if (escolhaFuncao == 3){
-    
+           clientes->mostraListaCliente();
         }
         else{
           return 0;
@@ -58,7 +58,7 @@ int main(){
         veiculos->~Veiculo();
       }
       else if (escolhaFuncao == 3){
-  
+        veiculos->mostraListaVeiculo();
       }
       else{
           return 0;

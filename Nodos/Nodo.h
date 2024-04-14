@@ -63,6 +63,9 @@ class Nodo{
     
     void mostraNodoVeiculo();
     void mostraNodoCliente();
+    
+    virtual void mostraListaCliente();
+    virtual void mostraListaVeiculo();
 };
 
 #endif

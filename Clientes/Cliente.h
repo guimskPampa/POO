@@ -30,6 +30,7 @@ class Cliente : protected Nodo{
     virtual ~Cliente();
     
     void mostraCliente();
+    virtual void mostraListaCliente();
 };
 
 #endif

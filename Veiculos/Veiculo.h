@@ -32,6 +32,7 @@ class Veiculo : protected Nodo{
     virtual ~Veiculo();
     
     void mostraVeiculo();
+    virtual void mostraListaVeiculo();
 };
 
 #endif

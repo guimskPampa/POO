@@ -56,3 +56,7 @@ Veiculo::~Veiculo(){
 void Veiculo::mostraVeiculo(){
   this->mostraNodoVeiculo();
 }
+
+void Veiculo::mostraListaVeiculo(){
+
+}

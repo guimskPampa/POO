@@ -52,3 +52,7 @@ Cliente::~Cliente(){
 void Cliente::mostraCliente(){
   this->mostraNodoCliente();
 }
+
+void mostraListaCliente(){
+
+}

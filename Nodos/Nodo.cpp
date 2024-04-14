@@ -134,3 +134,20 @@ void Nodo::mostraNodoVeiculo(){
   cout << "\nAno de Fabricacao: "<< this->getAtributoInt2() << "\nChassi: \n"<< this->getAtributoInt3();
 }
 
+void Nodo::mostraListaCliente(){
+  if(this!=NULL){
+    this->mostraNodoCliente();
+  }
+  if(this->proximoNodo != NULL){
+    this->proximoNodo->mostraListaCliente();
+  }
+}
+
+void Nodo::mostraListaVeiculo(){
+  if(this!=NULL){
+    this->mostraNodoVeiculo();
+  }
+  if(this->proximoNodo != NULL){
+    this->proximoNodo->mostraListaVeiculo();
+  }
+}
