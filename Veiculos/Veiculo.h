@@ -8,7 +8,7 @@
 
 using namespace std;
   
-class Veiculo : protected Nodo{
+class Veiculo : public Nodo{
   private:
     Nodo* listaNodo;
   public:

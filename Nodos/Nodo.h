@@ -58,14 +58,15 @@ class Nodo{
     Nodo* getAtributoNodo1();
     Nodo* getAtributoNodo2();
     
-    Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
-    virtual ~Nodo();
-    
     void mostraNodoVeiculo();
     void mostraNodoCliente();
     
-    virtual void mostraListaCliente();
-    virtual void mostraListaVeiculo();
+    Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
+     
+  public:
+    virtual void NodosCliente();
+    virtual void NodosVeiculo();
+    ~Nodo();
 };
 
 #endif

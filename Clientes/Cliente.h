@@ -6,7 +6,7 @@
 #include "../Nodos/Nodo.h"
 
 using namespace std;
-class Cliente : protected Nodo{
+class Cliente : public Nodo{
 
   private:
   
@@ -26,11 +26,11 @@ class Cliente : protected Nodo{
     void setProximoCliente(Nodo* newProximoCliente);
     Nodo* getProximoCliente();
     
-    Cliente(Nodo* listaNodo, int idade, string nome, string endereco);
-    virtual ~Cliente();
+    Cliente(Nodo* listaClientes, int idade, string nome, string endereco);
+    ~Cliente();
     
     void mostraCliente();
-    virtual void mostraListaCliente();
+    void mostraListaCliente();
 };
 
 #endif

@@ -94,7 +94,7 @@ Nodo* Nodo::getAtributoNodo2(){
 }
 
 Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2){
-
+  cout<<"CRIADO2";
   if (listaNodos==NULL){
   this->anteriorNodo = NULL;
   this->proximoNodo = NULL;
@@ -105,9 +105,9 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   this->proximoNodo = listaNodos;
   }
   this->setAtributoInt1(newInt1);
-  this->setAtributoInt1(newInt2);
-  this->setAtributoInt1(newInt3);
-  this->setAtributoInt1(newInt4);
+  this->setAtributoInt2(newInt2);
+  this->setAtributoInt3(newInt3);
+  this->setAtributoInt4(newInt4);
   
   this->setAtributoString1(newString1);
   this->setAtributoString2(newString2);
@@ -117,6 +117,7 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
 }
 
   Nodo::~Nodo(){
+  cout<<"APAGADO2";
   Nodo* aux;
   aux = this->anteriorNodo;
   this->proximoNodo->anteriorNodo = aux;
@@ -124,30 +125,27 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
 }
 
 void Nodo::mostraNodoCliente(){
-  cout << "Info Cliente:\n" << "Nome: " << this->getAtributoString1() << "\nidade: \n"<< this->getAtributoInt1();
+  cout << "\nInfo Cliente:\n" << "Nome: " << this->getAtributoString1() << "\nidade: "<< this->getAtributoInt1();
   cout << "\nendereco: "<< this->getAtributoString2();
 }
 
 void Nodo::mostraNodoVeiculo(){
-  cout << "Info Veiculo:\n" << "tipo: " << this->getAtributoString1();
+  cout << "\nInfo Veiculo:\n" << "tipo: " << this->getAtributoString1();
   cout << "\nCapacidade de carga: " << this->getAtributoInt1();
-  cout << "\nAno de Fabricacao: "<< this->getAtributoInt2() << "\nChassi: \n"<< this->getAtributoInt3();
+  cout << "\nAno de Fabricacao: "<< this->getAtributoInt2();
+  cout << "\nChassi: "<< this->getAtributoInt3();
 }
 
-void Nodo::mostraListaCliente(){
+void Nodo::NodosCliente(){
   if(this!=NULL){
     this->mostraNodoCliente();
   }
-  if(this->proximoNodo != NULL){
-    this->proximoNodo->mostraListaCliente();
-  }
+  this->proximoNodo->NodosCliente();
 }
 
-void Nodo::mostraListaVeiculo(){
+void Nodo::NodosVeiculo(){
   if(this!=NULL){
     this->mostraNodoVeiculo();
   }
-  if(this->proximoNodo != NULL){
-    this->proximoNodo->mostraListaVeiculo();
-  }
+  this->proximoNodo->NodosVeiculo();
 }

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Pedido : protected  Nodo{
+class Pedido : public Nodo{
   private:
   
     Nodo* listaNodo;

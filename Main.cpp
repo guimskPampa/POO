@@ -13,13 +13,14 @@ using namespace std;
 
 int main(){
   
+  
+  Nodo* listaClientes;
+  Nodo* listaVeiculos;
+  Nodo* listaPedidos;
+ 
+  
   int escolhaClasse=1, escolhaFuncao=1;
-  Nodo* listaClientes = NULL, * listaVeiculos = NULL, * listaPedidos = NULL;
-  
-  Cliente* clientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
-  Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
-  Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
-  
+
   while(escolhaClasse!=0&&escolhaFuncao!=0){
   
     cout<<"Escolha dentre as opcoes:\n";
@@ -36,14 +37,14 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          Cliente* clientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
+          listaClientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
           //Usa castinga para transformar Nodo* em cliente*
         }
         else if (escolhaFuncao == 2){
-          clientes->~Cliente();//ta tirando o primeiro sempre, criar metodo de escolha
+          delete listaClientes;//ta tirando o primeiro sempre, criar metodo de escolha
         }
         else if (escolhaFuncao == 3){
-           clientes->mostraListaCliente();
+           listaClientes->NodosCliente();
         }
         else{
           return 0;
@@ -52,13 +53,13 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        Veiculo* veiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
+        listaVeiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
       }
       else if (escolhaFuncao == 2){
-        veiculos->~Veiculo();
+        delete listaVeiculos;
       }
       else if (escolhaFuncao == 3){
-        veiculos->mostraListaVeiculo();
+        listaVeiculos->NodosVeiculo();
       }
       else{
           return 0;
@@ -67,10 +68,10 @@ int main(){
     case 3:
   
      if (escolhaFuncao == 1){
-        Pedido* pedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
+         listaPedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
       }
       else if (escolhaFuncao == 2){
-        pedidos->~Pedido();
+        delete listaPedidos;
       }
       else if (escolhaFuncao == 3){
   
@@ -78,7 +79,8 @@ int main(){
       else{
           return 0;
       }
-    }  
+    }
+    cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
   }
   
   

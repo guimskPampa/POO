@@ -36,9 +36,9 @@ Nodo* Cliente::getProximoCliente(){
   return this->getProximoNodo ();
 }
 
-Cliente::Cliente(Nodo* listaNodo, int idade, string nome, string endereco)
-        :Nodo(listaNodo, idade, 0, 0, 0, nome, endereco, NULL, NULL){
-
+Cliente::Cliente(Nodo* listaClientes, int idade, string nome, string endereco)
+        :Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL){
+        cout<<"CRIADO1";
   //cout<< "Digite idade, nome e endereco do novo cliente:\n";
   //cin >> idade >> nome >> endereco;
   //(listaNodosClientes, 1,2,3,4,"g","f", teste1, teste2)
@@ -46,13 +46,13 @@ Cliente::Cliente(Nodo* listaNodo, int idade, string nome, string endereco)
 }
 
 Cliente::~Cliente(){
- delete this;
+  cout<<"APAGADO1";
 }
 
 void Cliente::mostraCliente(){
   this->mostraNodoCliente();
 }
 
-void mostraListaCliente(){
-
+void Cliente::mostraListaCliente(){
+  this->NodosCliente();
 }

@@ -58,5 +58,5 @@ void Veiculo::mostraVeiculo(){
 }
 
 void Veiculo::mostraListaVeiculo(){
-
+  this->NodosVeiculo();
 }
