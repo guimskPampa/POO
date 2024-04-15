@@ -14,9 +14,9 @@ using namespace std;
 int main(){
   
   
-  Nodo* listaClientes;
-  Nodo* listaVeiculos;
-  Nodo* listaPedidos;
+  Nodo* listaClientes = NULL;
+  Nodo* listaVeiculos = NULL;
+  Nodo* listaPedidos = NULL;
  
   
   int escolhaClasse=1, escolhaFuncao=1;

@@ -126,26 +126,30 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
 
 void Nodo::mostraNodoCliente(){
   cout << "\nInfo Cliente:\n" << "Nome: " << this->getAtributoString1() << "\nidade: "<< this->getAtributoInt1();
-  cout << "\nendereco: "<< this->getAtributoString2();
+  cout << "\nendereco: "<< this->getAtributoString2() << "\n"<< endl;
+  return;
 }
 
 void Nodo::mostraNodoVeiculo(){
   cout << "\nInfo Veiculo:\n" << "tipo: " << this->getAtributoString1();
   cout << "\nCapacidade de carga: " << this->getAtributoInt1();
   cout << "\nAno de Fabricacao: "<< this->getAtributoInt2();
-  cout << "\nChassi: "<< this->getAtributoInt3();
+  cout << "\nChassi: "<< this->getAtributoInt3() << "\n"<< endl;
+  return;
 }
 
 void Nodo::NodosCliente(){
   if(this!=NULL){
     this->mostraNodoCliente();
+    this->proximoNodo->NodosCliente();
   }
-  this->proximoNodo->NodosCliente();
+  return;
 }
 
 void Nodo::NodosVeiculo(){
   if(this!=NULL){
     this->mostraNodoVeiculo();
+    this->proximoNodo->NodosVeiculo();
   }
-  this->proximoNodo->NodosVeiculo();
+  return;
 }
