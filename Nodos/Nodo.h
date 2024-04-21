@@ -16,6 +16,9 @@ class Nodo {
     int atributoInt3;//Clientes::           ; Veiculos::Chassi                    ; Pedidos:: Ano;
     int atributoInt4;//Clientes::           ; Veiculos::                          ; Pedidos:: ;
     
+    int longitude;
+    int latitude;
+    
     string atributoString1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
     string atributoString2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
     
@@ -39,6 +42,12 @@ class Nodo {
     void setAtributoInt4 (int newAtributoInt4);
     int getAtributoInt4 ();
     
+    void setLongitude (int newLongitude);
+    int getLongitude();
+    
+    void setLatitude (int newLatitude);
+    int getLatitude();
+    
     void setAtributoString1 (string newAtributoString1);
     string getAtributoString1 ();
     
@@ -61,7 +70,7 @@ class Nodo {
     void mostraNodoVeiculo();
     void mostraNodoCliente();
     
-    Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
+    Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2, int newLongitude, int newLatitude);
     
     void buscaAtributoString1(Nodo* lista, string target, int objeto);
     

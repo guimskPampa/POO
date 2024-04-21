@@ -37,14 +37,26 @@ void Veiculo::setProximoVeiculo(Nodo* newProximoVeiculo){
 }
 
 Nodo* Veiculo::getProximoVeiculo(){
-  return this->getProximoNodo ();
+  return this->getProximoNodo();
+}
+void Veiculo::setLongitude(int newLongitude){
+  this->setLongitude (newLongitude);
 }
 
-Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo)
-        :Nodo(listaNodo, capacidadeCarga, anoFabricacao, chassi, 0, tipo, "", NULL, NULL){
-  
-  //cout << "escolha capacidade carga, anoFabricacao, chassi e tipo";
-  //cin >> capacidadeCarga >> anoFabricacao >> chassi >> tipo; 
+int Veiculo::getLongitude(){
+  return  this->getLongitude();
+}
+
+void Veiculo::setLatitude(int newLatitude){
+  this->setLatitude(newLatitude);
+}
+
+int Veiculo::getLatitude(){
+  return  this->getLatitude();
+}
+
+Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo, int newLongitude, int newLatitude)
+        :Nodo(listaNodo, capacidadeCarga, anoFabricacao, chassi, 0, tipo, "", NULL, NULL, newLongitude, newLatitude){
 }
 
 Veiculo::~Veiculo(){

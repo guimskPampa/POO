@@ -49,8 +49,24 @@ Nodo* Pedido::getVeiculoPedido(){
   return this->getAtributoNodo2();
 }
 
-Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo)
-       :Nodo(listaNodo, ano, mes, dia, custo, "", "", cliente, veiculo){
+void Pedido::setLatitude(int newLatitude){
+  this->setLatitude(newLatitude);
+}
+
+string Pedido::getLatitude(){
+  return  this->getLatitude();
+}
+
+void Pedido::setLongitude(int newLongitude){
+  this->setLongitude (newLongitude);
+}
+
+string Pedido::getLongitude(){
+  return  this->getLongitude();
+}
+
+Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo, int newLongitude, int newLatitude)
+       :Nodo(listaNodo, ano, mes, dia, custo, "", "", cliente, veiculo, newLongitude, newLatitude){
   
   //cout << "escolha cliente, veiculo, ano, mes, dia, custo do pedido\n";
   //cin >> cliente >> veiculo >> ano >> mes >> dia >> custo;

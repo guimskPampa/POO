@@ -1,20 +1,21 @@
 #include  "Cliente.h"
 
-int Cliente::setIdade(int newIdade){
+void Cliente::setIdade(){
   try {
-  
+    int newIdade;
+    
+    cin >> newIdade;
+    
     if (newIdade>=18){
       this->setAtributoInt1 (newIdade); 
-      return 1;
     }
     else{
       throw(0);
     }
-    
   }
   catch(int erro){
-    cout << "Cliente com idade menor que 18 anos, nao permitido";
-    return erro;
+    cout << "Cliente com idade menor que 18 anos, nao permitido"<< endl;
+    this->setIdade();
   }
 }
 
@@ -49,7 +50,7 @@ Nodo* Cliente::getProximoCliente(){
 }
 
 Cliente::Cliente(Nodo* listaClientes, int idade, string nome, string endereco)
-        :Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL){
+        :Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL,0,0){
         cout<<"CRIADO1";
   //cout<< "Digite idade, nome e endereco do novo cliente:\n";
   //cin >> idade >> nome >> endereco;

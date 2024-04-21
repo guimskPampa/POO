@@ -14,7 +14,7 @@ class Cliente : public Nodo{
   
   public:
 
-    int setIdade(int newIdade);
+    void setIdade();
     int getIdade();
 
     void setNome(string newNome);

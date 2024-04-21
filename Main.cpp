@@ -53,7 +53,7 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        listaVeiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca");
+        listaVeiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca",1,1);
       }
       else if (escolhaFuncao == 2){
         delete listaVeiculos;
@@ -68,7 +68,7 @@ int main(){
     case 3:
   
      if (escolhaFuncao == 1){
-         listaPedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos);
+         listaPedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos,1,1);
       }
       else if (escolhaFuncao == 2){
         delete listaPedidos;

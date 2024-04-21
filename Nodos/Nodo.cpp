@@ -25,6 +25,18 @@ void Nodo::setAtributoInt4 (int newAtributoInt4){
 int Nodo::getAtributoInt4 (){
   return this->atributoInt4;
 }
+void Nodo::setLongitude (int newLongitude){
+  this->longitude = newLongitude;
+}
+int Nodo::getLongitude (){
+  return this->longitude;
+}
+void Nodo::setLatitude (int newLatitude){
+  this->latitude= newLatitude;
+}
+int Nodo::getLatitude (){
+  return this->latitude;
+}
 void Nodo::setAtributoString1 (string newAtributoString1){
   this->atributoString1 = newAtributoString1;
 }
@@ -91,8 +103,9 @@ Nodo* Nodo::getAtributoNodo2(){
   return this->atributoNodo2;
 }
 
-Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2){
+Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2, int newLongitude, int newLatitude){
   cout<<"CRIADO2"; 
+  
   if (listaNodos==NULL){
   this->anteriorNodo = NULL;
   this->proximoNodo = NULL;
@@ -113,6 +126,9 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   
   this->setAtributoNodo1(newPonteiro1);
   this->setAtributoNodo2(newPonteiro2);
+  
+  this->setLongitude (newLongitude);
+  this->setLatitude (newLatitude);
 }
 
   Nodo::~Nodo(){

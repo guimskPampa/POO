@@ -28,7 +28,13 @@ class Veiculo : public Nodo{
     void setProximoVeiculo(Nodo* newProximoVeiculo);
     Nodo* getProximoVeiculo();
     
-    Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo);
+    void setLongitude(int newLongitude);
+    int getLongitude();
+    
+    void setLatitude(int newLatitude);
+    int getLatitude();
+    
+    Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo, int newLongitude, int newLatitude);
     virtual ~Veiculo();
     
     void mostraVeiculo();
