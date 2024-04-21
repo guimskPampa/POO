@@ -8,4 +8,4 @@
 -Criar condicionais nas funcoes de set;
 
 ===================Alteracoes===================
-
+-Virtual latitude e longitude;

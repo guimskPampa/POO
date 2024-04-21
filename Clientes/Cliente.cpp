@@ -1,31 +1,39 @@
 #include  "Cliente.h"
 
 void Cliente::setIdade(){
-  try {
+  
     int newIdade;
-    
     cin >> newIdade;
     
     if (newIdade>=18){
+    
       this->setAtributoInt1 (newIdade); 
     }
     else{
-      throw(0);
+    
+      cout << "Cliente com idade menor que 18 anos, nao permitido"<< endl;
+      this->setIdade();
     }
-  }
-  catch(int erro){
-    cout << "Cliente com idade menor que 18 anos, nao permitido"<< endl;
-    this->setIdade();
-  }
 }
 
 int Cliente::getIdade(){
   return this->getAtributoInt1 ();
 }
 
-void Cliente::setNome(string newNome){
+void Cliente::setNome(){
+
+  string newNome; 
+  cin >> newNome;
   
-  this->setAtributoString1 (newNome);
+  if(buscaCliente(listaClientes, newNome)!=0){
+  
+    this->setAtributoString1 (newNome);
+  }
+  else{
+    
+      cout << "Cliente com nome ja cadastrado, nao permitido"<< endl;
+      this->setNome();
+    }
   
 }
 
@@ -33,7 +41,11 @@ string Cliente::getNome(){
   return this->getAtributoString1 ();
 }
 
-void Cliente::setEndereco(string newEndereco){
+void Cliente::setEndereco(){
+
+  string newEndereco; 
+  cin >> newEndereco;
+  
   this->setAtributoString2 (newEndereco);
 }
 

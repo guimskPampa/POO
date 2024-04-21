@@ -37,8 +37,13 @@ int main(){
       case 1:
       
         if (escolhaFuncao == 1){
-          listaClientes = new Cliente(listaClientes, 15, "Jonatan", "Alegrete");
-          //Usa castinga para transformar Nodo* em cliente*
+        
+          listaClientes = new Cliente(listaClientes, 0, "0", "0");
+          
+          dynamic_cast<Cliente*>(listaClientes)->setIdade();
+          dynamic_cast<Cliente*>(listaClientes)->setNome();
+          dynamic_cast<Cliente*>(listaClientes)->setEndereco();
+          
         }
         else if (escolhaFuncao == 2){
           delete listaClientes;//ta tirando o primeiro sempre, criar metodo de escolha
@@ -53,7 +58,12 @@ int main(){
     case 2:
     
       if (escolhaFuncao == 1){
-        listaVeiculos = new Veiculo(listaVeiculos, 1, 2, 3, "fusca",1,1);
+      
+        listaVeiculos = new Veiculo(listaVeiculos, 0, 0, 0, "0",0,0);
+        
+        dynamic_cast<Veiculo*>(listaVeiculos)->setTipo();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setCapacidadeCarga();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setEndereco();
       }
       else if (escolhaFuncao == 2){
         delete listaVeiculos;

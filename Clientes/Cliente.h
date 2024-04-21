@@ -17,10 +17,10 @@ class Cliente : public Nodo{
     void setIdade();
     int getIdade();
 
-    void setNome(string newNome);
+    void setNome();
     string getNome();
      
-    void setEndereco(string newEndereco);
+    void setEndereco();
     string getEndereco();
     
     void setProximoCliente(Nodo* newProximoCliente);
