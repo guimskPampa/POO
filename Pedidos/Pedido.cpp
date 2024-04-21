@@ -1,5 +1,3 @@
-#include  <iostream>
-#include  <string>
 #include  "Pedido.h"
 
 
@@ -59,7 +57,7 @@ Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* clie
 }
 
 Pedido::~Pedido(){
-  delete this;
+
 }
 void Pedido::mostraPedido(){
   this->mostraNodoVeiculo();

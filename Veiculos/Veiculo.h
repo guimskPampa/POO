@@ -33,6 +33,8 @@ class Veiculo : public Nodo{
     
     void mostraVeiculo();
     virtual void mostraListaVeiculo();
+    
+    void buscaVeiculo(Nodo* lista, string tipo);
 };
 
 #endif

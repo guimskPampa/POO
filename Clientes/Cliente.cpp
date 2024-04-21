@@ -1,11 +1,21 @@
-#include  <iostream>
-#include  <string>
 #include  "Cliente.h"
 
-using namespace std;
-
-void Cliente::setIdade(int newIdade){
-  this->setAtributoInt1 (newIdade);
+int Cliente::setIdade(int newIdade){
+  try {
+  
+    if (newIdade>=18){
+      this->setAtributoInt1 (newIdade); 
+      return 1;
+    }
+    else{
+      throw(0);
+    }
+    
+  }
+  catch(int erro){
+    cout << "Cliente com idade menor que 18 anos, nao permitido";
+    return erro;
+  }
 }
 
 int Cliente::getIdade(){
@@ -13,7 +23,9 @@ int Cliente::getIdade(){
 }
 
 void Cliente::setNome(string newNome){
+  
   this->setAtributoString1 (newNome);
+  
 }
 
 string Cliente::getNome(){
@@ -56,3 +68,7 @@ void Cliente::mostraCliente(){
 void Cliente::mostraListaCliente(){
   this->NodosCliente();
 }
+
+ void Cliente::buscaCliente(Nodo* lista, string nome){
+  buscaAtributoString1(lista, nome, 1);
+ }

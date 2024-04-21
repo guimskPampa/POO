@@ -1,5 +1,3 @@
-#include  <iostream>
-#include  <string>
 #include  "Veiculo.h"
 
 void Veiculo::setTipo(string newTipo){
@@ -50,7 +48,6 @@ Veiculo:: Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int c
 }
 
 Veiculo::~Veiculo(){
-  delete this;
 }
 
 void Veiculo::mostraVeiculo(){
@@ -59,4 +56,8 @@ void Veiculo::mostraVeiculo(){
 
 void Veiculo::mostraListaVeiculo(){
   this->NodosVeiculo();
+}
+
+void Veiculo::buscaVeiculo(Nodo* lista, string tipo){
+  buscaAtributoString1(lista, tipo, 2);
 }

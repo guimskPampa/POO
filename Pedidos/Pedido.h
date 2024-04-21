@@ -5,8 +5,6 @@
 #include  <string>
 #include "../Nodos/Nodo.h"
 
-
-
 using namespace std;
 
 class Pedido : public Nodo{

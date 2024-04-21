@@ -1,17 +1,11 @@
 
 ===================Resolucao===================
 
--Conferir syntaxe dos arquivos (include);
--Resolver problema de cin e cout;
+-Resolver toLowerString in Nodo;
 
 ===================Criacao===================
 
--criar atributo privado para cada classe guardar sua lista;
--Criar Classe Erros;
 -Criar condicionais nas funcoes de set;
--Criar opcao caso nao exista o cliente/veiculo no set Pedido, perguntar se deseja adicionar na ListaData do respectivo;
 
 ===================Alteracoes===================
--Botar para as classes dos itens herdarem do lista;
--Alterar opcoes no Main para que pecam os dados necessarios;
--Alterar apagaNodo para que receba Lista;
+

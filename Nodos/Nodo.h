@@ -3,11 +3,11 @@
 
 #include  <iostream>
 #include  <string>
-
+#include  "../Recursos/Recurso.h"
 
 using namespace std;
 
-class Nodo{
+class Nodo {
 
   private:
   
@@ -62,11 +62,16 @@ class Nodo{
     void mostraNodoCliente();
     
     Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2);
-     
+    
+    void buscaAtributoString1(Nodo* lista, string target, int objeto);
+    
+    
   public:
+  
     virtual void NodosCliente();
     virtual void NodosVeiculo();
-    ~Nodo();
+    
+    virtual ~Nodo();
 };
 
 #endif

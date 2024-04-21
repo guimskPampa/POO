@@ -14,10 +14,10 @@ class Cliente : public Nodo{
   
   public:
 
-    void setIdade(int minhaIdade);
+    int setIdade(int newIdade);
     int getIdade();
 
-    void setNome(string nome);
+    void setNome(string newNome);
     string getNome();
      
     void setEndereco(string newEndereco);
@@ -31,6 +31,8 @@ class Cliente : public Nodo{
     
     void mostraCliente();
     void mostraListaCliente();
+    
+    void buscaCliente(Nodo* lista, string nome);
 };
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MAIN_CPP
+#define MAIN_CPP
 
 #include  <iostream>
 #include  <string>

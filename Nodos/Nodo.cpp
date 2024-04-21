@@ -1,5 +1,3 @@
-#include  <iostream>
-#include  <string>
 #include  "Nodo.h"
 
 
@@ -94,7 +92,7 @@ Nodo* Nodo::getAtributoNodo2(){
 }
 
 Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newPonteiro1, Nodo* newPonteiro2){
-  cout<<"CRIADO2";
+  cout<<"CRIADO2"; 
   if (listaNodos==NULL){
   this->anteriorNodo = NULL;
   this->proximoNodo = NULL;
@@ -103,6 +101,7 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
   else{
   this->anteriorNodo = NULL;
   this->proximoNodo = listaNodos;
+  listaNodos = this;
   }
   this->setAtributoInt1(newInt1);
   this->setAtributoInt2(newInt2);
@@ -153,3 +152,22 @@ void Nodo::NodosVeiculo(){
   }
   return;
 }
+
+void Nodo::buscaAtributoString1(Nodo* lista, string target, int objeto){
+  Nodo* aux = lista;
+      
+  while(aux!=NULL){
+    if(toLowerString(aux->atributoString1) == toLowerString(target)){
+      switch(objeto){
+      
+        case 1: mostraNodoCliente();
+  
+        case 2: mostraNodoVeiculo();
+    
+      }
+      return;
+    } 
+    aux = aux->proximoNodo;
+  }
+  cout << "objeto de busca inexistente"<<endl;
+ }
