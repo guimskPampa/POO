@@ -7,7 +7,9 @@ Veiculo - Responsavel por modificar a lista de veiculos, criando, alterando ou d
 
 Pedido - Responsavel por modificar a lista de pedidos, criando, alterando ou deletando nodos pedido atraves da classe base (Nodo) .
 
-Nodo- Responsavel por fornecer os metodos e atributos genericos para que as classes derivadas possam realizar suas funcoes.
+Nodo - Responsavel por fornecer os metodos e atributos genericos para que as classes derivadas possam realizar suas funcoes.
+
+Recurso - Responsavel pela realizacao de calculos e operacoes de variaveis.
 
 }
 
@@ -19,3 +21,4 @@ Ideia Geral{
 }
 
 g++ Main.cpp Veiculos/Veiculo.cpp Clientes/Cliente.cpp Nodos/Nodo.cpp Pedidos/Pedido.cpp Recursos/Recurso.cpp -o main.exe
+
