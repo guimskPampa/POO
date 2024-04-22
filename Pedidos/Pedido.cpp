@@ -64,11 +64,23 @@ void Pedido::setClientePedido(Nodo* listaClientes){
 
 void Pedido::setVeiculoPedido(Nodo* listaVeiculos){
 
-  string newVeiculo;
-  cout<<"Informe o tipo do veiculo deste pedido:\n"<<endl;
-  cin>>newVeiculo;
+  int escolhaVeiculo;
+  cout<<"veiculo sera escolhido por distancia(1) ou tipo(2)?"<<endl;
+  cin>>escolhaVeiculo;
 
-  this->setNodoCondicionalString(newVeiculo, listaVeiculos, 2);
+  if(escolhaVeiculo==1){
+    this->setNodo2(this->veiculoPerto(listaVeiculos));
+  }
+  else if(escolhaVeiculo==2){
+    string newVeiculo;
+    cout<<"Informe o tipo do veiculo deste pedido:\n"<<endl;
+    cin>>newVeiculo;
+
+    this->setNodoCondicionalString(newVeiculo, listaVeiculos, 2);
+  }
+  else{
+    return;
+  }
 }
 
 Nodo* Pedido::getClientePedido(){
@@ -115,6 +127,9 @@ Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* clie
 Pedido::~Pedido(){
 }
 void Pedido::mostraPedido(){
-  this->mostraNodoVeiculo();
-  this->mostraNodoCliente();
+  this->mostraNodoPedido();
+}
+
+Nodo* Pedido::veiculoPerto(Nodo* listaVeiculos){
+   this->menorDistancia(listaVeiculos);
 }

@@ -42,5 +42,7 @@ class Pedido : public Nodo{
     virtual ~Pedido();
     
     void mostraPedido();
+
+    Nodo* veiculoPerto(Nodo* listaVeiculos);
 };
 #endif

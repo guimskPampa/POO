@@ -155,6 +155,12 @@ void Nodo::mostraNodoVeiculo(){
   return;
 }
 
+void Nodo::mostraNodoPedido(){
+  this->nodo1->mostraNodoCliente();
+  this->nodo2->mostraNodoVeiculo();
+  return;
+}
+
 void Nodo::NodosCliente(){
 
   this->mostraNodoCliente();
@@ -197,4 +203,21 @@ void Nodo::buscaString1(Nodo* lista, string target, int objeto){
     aux = aux->proximoNodo;
   }
   cout << "objeto de busca inexistente"<<endl;
+ }
+
+ Nodo* Nodo::menorDistancia(Nodo* listaVeiculos){
+  if(listaVeiculos!=NULL){
+    Nodo* maisPerto = listaVeiculos;
+    Nodo* index = listaVeiculos;
+    double menorDistancia = distanciaDoisPontos(index->latitude, index->longitude, this->latitude, this->longitude);
+    while(index!=NULL){
+      if (menorDistancia>distanciaDoisPontos(index->latitude, index->longitude, this->latitude, this->longitude)){
+        menorDistancia = distanciaDoisPontos(index->latitude, index->longitude, this->latitude, this->longitude);
+        maisPerto = index;
+      }
+      index = index->proximoNodo;
+    }
+    return maisPerto;
+  }
+  return NULL;
  }
