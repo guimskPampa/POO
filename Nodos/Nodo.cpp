@@ -27,13 +27,13 @@ int Nodo::getInt4 (){
 void Nodo::setLongitude (int newLongitude){
   this->longitude = newLongitude;
 }
-int Nodo::getLongitude (){
+double Nodo::getLongitude (){
   return this->longitude;
 }
 void Nodo::setLatitude (int newLatitude){
   this->latitude= newLatitude;
 }
-int Nodo::getLatitude (){
+double Nodo::getLatitude (){
   return this->latitude;
 }
 void Nodo::setString1 (string newAtributoString1){
@@ -132,7 +132,7 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
 
   Nodo::~Nodo(){
   cout<<"APAGADO2";
-  
+
   Nodo* aux;
   aux = this->anteriorNodo;
   this->proximoNodo->anteriorNodo = aux;
