@@ -1,12 +1,13 @@
-
-#include <string>
 #include "Recurso.h"
-#include <cctype>
 
-Recurso::string toLowerString(string palavra){
-  int i;
-  char letras[]=palavra;
-  while((strlen(letra)-1)!=i){
+using namespace std;
+
+string Recurso::toLowerString(string palavra){
+  int i, tam = palavra.length();
+
+  char letras[tam];
+  strcpy(letras, palavra.c_str());
+  while((tam-1)!=i){
     letras[i] = tolower(letras[i]);
   }
   return (string)letras;

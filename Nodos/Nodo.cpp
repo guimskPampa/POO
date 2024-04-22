@@ -1,6 +1,5 @@
 #include  "Nodo.h"
 
-
 void Nodo::setAtributoInt1 (int newAtributoInt1){
   this->atributoInt1 = newAtributoInt1;
 }

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Nodo {
+class Nodo: public Recurso {
 
   private:
   
