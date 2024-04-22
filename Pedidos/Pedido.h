@@ -33,10 +33,10 @@ class Pedido : public Nodo{
     Nodo* getVeiculoPedido();
     
     void setLongitude();
-    string getLongitude();
+    double getLongitude();
     
     void setLatitude();
-    string getLatitude();
+    double getLatitude();
 
     Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo, int newLongitude, int newLatitude);
     virtual ~Pedido();

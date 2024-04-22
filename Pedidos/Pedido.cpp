@@ -81,27 +81,27 @@ Nodo* Pedido::getVeiculoPedido(){
 
 void Pedido::setLatitude(){
 
-  int newLatitude;
+  double newLatitude;
   cout<<"informe a Latitude do pedido:\n"<<endl;
   cin>>newLatitude;
 
   this->Nodo::setLatitude(newLatitude);
 }
 
-string Pedido::getLatitude(){
+double Pedido::getLatitude(){
   return  this->getLatitude();
 }
 
 void Pedido::setLongitude(){
 
-  int newLongitude;
+  double newLongitude;
   cout<<"informe a Longitude do pedido:\n"<<endl;
   cin>>newLongitude;
 
   this->Nodo::setLongitude(newLongitude);
 }
 
-string Pedido::getLongitude(){
+double Pedido::getLongitude(){
   return  this->getLongitude();
 }
 
@@ -113,7 +113,6 @@ Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* clie
 }
 
 Pedido::~Pedido(){
-
 }
 void Pedido::mostraPedido(){
   this->mostraNodoVeiculo();

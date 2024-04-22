@@ -132,9 +132,12 @@ Nodo::Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4,
 
   Nodo::~Nodo(){
   cout<<"APAGADO2";
+  
   Nodo* aux;
   aux = this->anteriorNodo;
   this->proximoNodo->anteriorNodo = aux;
+  aux->proximoNodo = this->proximoNodo;
+
   delete this;
 }
 

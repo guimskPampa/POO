@@ -16,8 +16,8 @@ class Nodo: public Recurso {
     int int3;//Clientes::           ; Veiculos::Chassi                    ; Pedidos:: Ano;
     int int4;//Clientes::           ; Veiculos::                          ; Pedidos:: ;
     
-    int longitude;
-    int latitude;
+    double longitude;
+    double latitude;
     
     string string1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
     string string2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
@@ -42,11 +42,11 @@ class Nodo: public Recurso {
     void setInt4 (int newAtributoInt4);
     int getInt4 ();
     
-    virtual void setLongitude (int newLongitude);
-    int getLongitude();
+    void setLongitude (int newLongitude);
+    double getLongitude();
     
-    virtual void setLatitude (int newLatitude);
-    int getLatitude();
+    void setLatitude (int newLatitude);
+    double getLatitude();
     
     void setString1 (string newAtributoString1);
     string getString1 ();
@@ -61,25 +61,23 @@ class Nodo: public Recurso {
     Nodo* getAnteriorNodo();
     
     void setNodo1 (Nodo* newNodo);
-    void setNodo2 (Nodo* newNodo);
-    void setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo);
-    
     Nodo* getNodo1();
-    Nodo* getNodo2();
+
+    void setNodo2 (Nodo* newNodo);
+    Nodo* getNodo2();    
     
     void mostraNodoVeiculo();
     void mostraNodoCliente();
     
     Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2, int newLongitude, int newLatitude);
-    
+    virtual ~Nodo();
+
+    void setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo);
     void buscaString1(Nodo* lista, string target, int objeto);
     
     virtual void NodosCliente();
     virtual void NodosVeiculo();
-    
-  public:
-    
-    virtual ~Nodo();
+
 };
 
 #endif

@@ -46,7 +46,7 @@ int main(){
           
         }
         else if (escolhaFuncao == 2){
-          delete listaClientes;//ta tirando o primeiro sempre, criar metodo de escolha
+          delete  dynamic_cast<Cliente*>(listaClientes);//ta tirando o primeiro sempre, criar metodo de escolha
         }
         else if (escolhaFuncao == 3){
           if (listaClientes!=NULL){
@@ -74,7 +74,7 @@ int main(){
 
        }
         else if (escolhaFuncao == 2){
-          delete listaVeiculos;
+          delete dynamic_cast<Veiculo*>(listaVeiculos);
         }
         else if (escolhaFuncao == 3){
           if (listaVeiculos!=NULL){
@@ -104,7 +104,7 @@ int main(){
          
         }
         else if (escolhaFuncao == 2){
-          delete listaPedidos;
+          delete dynamic_cast<Pedido*>(listaPedidos);
         }
         else if (escolhaFuncao == 3){
   

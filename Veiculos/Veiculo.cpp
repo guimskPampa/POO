@@ -61,27 +61,27 @@ Nodo* Veiculo::getProximoVeiculo(){
 }
 void Veiculo::setLongitude(){
 
-  int newLongitude;
+  double newLongitude;
   cout<<"informe a Longitude do veiculo:\n"<<endl;
   cin>>newLongitude;
 
   this->Nodo::setLongitude (newLongitude);
 }
 
-int Veiculo::getLongitude(){
+double Veiculo::getLongitude(){
   return  this->getLongitude();
 }
 
 void Veiculo::setLatitude(){
   
-  int newLatitude;
+  double newLatitude;
   cout<<"informe a Latitude do veiculo:\n"<<endl;
   cin>>newLatitude;
 
   this->Nodo::setLatitude(newLatitude);
 }
 
-int Veiculo::getLatitude(){
+double Veiculo::getLatitude(){
   return  this->getLatitude();
 }
 

@@ -29,10 +29,10 @@ class Veiculo : public Nodo{
     Nodo* getProximoVeiculo();
     
     void setLongitude();
-    int getLongitude();
+    double getLongitude();
     
-   virtual void setLatitude();
-   virtual int getLatitude();
+    void setLatitude();
+    double getLatitude();
     
     Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo, int newLongitude, int newLatitude);
     virtual ~Veiculo();

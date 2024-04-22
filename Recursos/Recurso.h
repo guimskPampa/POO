@@ -10,7 +10,10 @@ using namespace std;
 class Recurso {
 
   public:
+
     string toLowerString(string palavra);
+
+    double distanciaDoisPontos(double latitude1, double longitude1, double latitude2, double longitude2);
     
 };
 
