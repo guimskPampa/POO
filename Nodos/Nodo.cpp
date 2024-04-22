@@ -153,18 +153,24 @@ void Nodo::mostraNodoVeiculo(){
 }
 
 void Nodo::NodosCliente(){
-  if(this!=NULL){
-    this->mostraNodoCliente();
+
+  this->mostraNodoCliente();
+
+  if (this->proximoNodo!=NULL){
     this->proximoNodo->NodosCliente();
   }
+
   return;
 }
 
 void Nodo::NodosVeiculo(){
-  if(this!=NULL){
-    this->mostraNodoVeiculo();
+
+  this->mostraNodoVeiculo();
+
+  if (this->proximoNodo!=NULL){
     this->proximoNodo->NodosVeiculo();
   }
+  
   return;
 }
 
