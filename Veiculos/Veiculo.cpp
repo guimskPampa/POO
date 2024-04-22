@@ -65,7 +65,7 @@ void Veiculo::setLongitude(){
   cout<<"informe a Longitude do veiculo:\n"<<endl;
   cin>>newLongitude;
 
-  this->setLongitude (newLongitude);
+  this->Nodo::setLongitude (newLongitude);
 }
 
 int Veiculo::getLongitude(){
@@ -78,7 +78,7 @@ void Veiculo::setLatitude(){
   cout<<"informe a Latitude do veiculo:\n"<<endl;
   cin>>newLatitude;
 
-  this->setLatitude(newLatitude);
+  this->Nodo::setLatitude(newLatitude);
 }
 
 int Veiculo::getLatitude(){

@@ -85,7 +85,7 @@ void Pedido::setLatitude(){
   cout<<"informe a Latitude do pedido:\n"<<endl;
   cin>>newLatitude;
 
-  this->setLatitude(newLatitude);
+  this->Nodo::setLatitude(newLatitude);
 }
 
 string Pedido::getLatitude(){
@@ -98,7 +98,7 @@ void Pedido::setLongitude(){
   cout<<"informe a Longitude do pedido:\n"<<endl;
   cin>>newLongitude;
 
-  this->setLongitude (newLongitude);
+  this->Nodo::setLongitude(newLongitude);
 }
 
 string Pedido::getLongitude(){

@@ -42,10 +42,10 @@ class Nodo {
     void setAtributoInt4 (int newAtributoInt4);
     int getAtributoInt4 ();
     
-    void setLongitude (int newLongitude);
+    virtual void setLongitude (int newLongitude);
     int getLongitude();
     
-    void setLatitude (int newLatitude);
+    virtual void setLatitude (int newLatitude);
     int getLatitude();
     
     void setAtributoString1 (string newAtributoString1);
@@ -74,11 +74,10 @@ class Nodo {
     
     void buscaAtributoString1(Nodo* lista, string target, int objeto);
     
-    
-  public:
-  
     virtual void NodosCliente();
     virtual void NodosVeiculo();
+    
+  public:
     
     virtual ~Nodo();
 };

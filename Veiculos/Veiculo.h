@@ -38,7 +38,7 @@ class Veiculo : public Nodo{
     virtual ~Veiculo();
     
     void mostraVeiculo();
-    virtual void mostraListaVeiculo();
+    void mostraListaVeiculo();
     
     void buscaVeiculo(Nodo* lista, string tipo);
 };
