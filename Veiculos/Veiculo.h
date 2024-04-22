@@ -13,26 +13,26 @@ class Veiculo : public Nodo{
     Nodo* listaNodo;
   public:
   
-    void setTipo(string newTipo);
+    void setTipo();
     string getTipo();
      
-    void setCapacidadeCarga(int newCapacidadeCarga);
+    void setCapacidadeCarga();
     int getCapacidadeCarga();
     
-    void setAnoFabricacao(int newAnoFabricacao);
+    void setAnoFabricacao();
     int getAnoFabricacao();
     
-    void setChassi(int newChassi);
+    void setChassi();
     int getChassi();
     
     void setProximoVeiculo(Nodo* newProximoVeiculo);
     Nodo* getProximoVeiculo();
     
-    void setLongitude(int newLongitude);
+    void setLongitude();
     int getLongitude();
     
-    void setLatitude(int newLatitude);
-    int getLatitude();
+   virtual void setLatitude();
+   virtual int getLatitude();
     
     Veiculo(Nodo* listaNodo, int capacidadeCarga, int anoFabricacao, int chassi, string tipo, int newLongitude, int newLatitude);
     virtual ~Veiculo();

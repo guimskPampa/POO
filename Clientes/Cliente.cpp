@@ -3,6 +3,7 @@
 void Cliente::setIdade(){
   
     int newIdade;
+    cout << "Informe a idade do cliente:\n"<< endl;
     cin >> newIdade;
     
     if (newIdade>=18){
@@ -11,7 +12,7 @@ void Cliente::setIdade(){
     }
     else{
     
-      cout << "Cliente com idade menor que 18 anos, nao permitido"<< endl;
+      cout << "Cliente com idade menor que 18 anos, nao permitido\n"<< endl;
       this->setIdade();
     }
 }
@@ -22,18 +23,19 @@ int Cliente::getIdade(){
 
 void Cliente::setNome(){
 
-  string newNome; 
+  string newNome;
+  cout << "Informe o nome do cliente:\n"<< endl;
   cin >> newNome;
   
-  if(buscaCliente(listaClientes, newNome)!=0){
+  //if(buscaCliente(listaClientes, newNome)!=0){
   
     this->setAtributoString1 (newNome);
-  }
-  else{
+ // }
+ // else{
     
-      cout << "Cliente com nome ja cadastrado, nao permitido"<< endl;
-      this->setNome();
-    }
+      //cout << "Cliente com nome ja cadastrado, nao permitido\n"<< endl;
+      //this->setNome();
+  //  }
   
 }
 
@@ -43,7 +45,8 @@ string Cliente::getNome(){
 
 void Cliente::setEndereco(){
 
-  string newEndereco; 
+  string newEndereco;
+  cout << "Informe o endereco do cliente:\n"<< endl;
   cin >> newEndereco;
   
   this->setAtributoString2 (newEndereco);

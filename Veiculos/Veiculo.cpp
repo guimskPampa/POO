@@ -1,6 +1,11 @@
 #include  "Veiculo.h"
 
-void Veiculo::setTipo(string newTipo){
+void Veiculo::setTipo(){
+  
+  string newTipo;
+  cout<<"informe o tipo de veiculo: carro, moto, caminhao ou aviao:\n"<<endl;
+  cin>>newTipo;
+
   this->setAtributoString1 (newTipo);
 }
 
@@ -8,7 +13,12 @@ string Veiculo::getTipo(){
   return  this->getAtributoString1 ();
 }
      
-void Veiculo::setCapacidadeCarga(int newCapacidadeCarga){
+void Veiculo::setCapacidadeCarga(){
+
+  int newCapacidadeCarga;
+  cout<<"informe a quantia de capacidade de carga:\n"<<endl;
+  cin>>newCapacidadeCarga;
+  
   this->setAtributoInt1 (newCapacidadeCarga); 
 }
 
@@ -16,7 +26,12 @@ int Veiculo::getCapacidadeCarga(){
   return this->getAtributoInt1 (); 
 }
 
-void Veiculo::setAnoFabricacao(int newAnoFabricacao){
+void Veiculo::setAnoFabricacao(){
+  
+  int newAnoFabricacao;
+  cout<<"informe o ano de fabricação:\n"<<endl;
+  cin>>newAnoFabricacao;
+
   this->setAtributoInt2 (newAnoFabricacao);
 }
 
@@ -24,7 +39,12 @@ int Veiculo::getAnoFabricacao(){
   return  this->getAtributoInt2 ();
 }
      
-void Veiculo::setChassi(int newChassi){
+void Veiculo::setChassi(){
+
+  int newChassi;
+  cout<<"informe o chassi:\n"<<endl;
+  cin>>newChassi;
+
   this->setAtributoInt3 (newChassi);
 }
 
@@ -39,7 +59,12 @@ void Veiculo::setProximoVeiculo(Nodo* newProximoVeiculo){
 Nodo* Veiculo::getProximoVeiculo(){
   return this->getProximoNodo();
 }
-void Veiculo::setLongitude(int newLongitude){
+void Veiculo::setLongitude(){
+
+  int newLongitude;
+  cout<<"informe a Longitude do veiculo:\n"<<endl;
+  cin>>newLongitude;
+
   this->setLongitude (newLongitude);
 }
 
@@ -47,7 +72,12 @@ int Veiculo::getLongitude(){
   return  this->getLongitude();
 }
 
-void Veiculo::setLatitude(int newLatitude){
+void Veiculo::setLatitude(){
+  
+  int newLatitude;
+  cout<<"informe a Latitude do veiculo:\n"<<endl;
+  cin>>newLatitude;
+
   this->setLatitude(newLatitude);
 }
 

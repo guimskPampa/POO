@@ -1,14 +1,7 @@
-# Definição de variáveis
-EXECUTAVEL := main.exe
-SOURCES := Main.cpp Veiculos/Veiculo.cpp Clientes/Cliente.cpp Pedidos/Pedido.cpp Nodos/Nodo.cpp
+TARGET = main.exe
+CXX = c++
+LD = c++
+OBJS = Main.cpp Veiculo.cpp Cliente.cpp Nodo.cpp Pedido.cpp Recurso.cpp 
 
-# Regras
-all: $(EXECUTAVEL)
-
-$(EXECUTAVEL): $(SOURCES)
-	g++ -o $@ -s $^
-
-.PHONY: clean
-
-clean:
-	rm -f $(EXECUTAVEL)
+main.exe:$(OBJS)
+	$(LD) -o $(TARGET) $(OBJS)

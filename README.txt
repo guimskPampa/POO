@@ -17,3 +17,5 @@ Ideia Geral{
 
 
 }
+
+g++ Main.cpp Veiculos/Veiculo.cpp Clientes/Cliente.cpp Nodos/Nodo.cpp Pedidos/Pedido.cpp Recursos/Recurso.cpp -o main.exe

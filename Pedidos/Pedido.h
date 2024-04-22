@@ -14,28 +14,28 @@ class Pedido : public Nodo{
     
   public:
   
-    void setDia(int newDia);
+    void setDia();
     int getDia();
 
-    void setMes(int newMes);
+    void setMes();
     int getMes();
     
-    void setAno(int newAno);
+    void setAno();
     int getAno();
     
-    void setCusto(int newCusto);
+    void setCusto();
     int getCusto();
     
-    void setClientePedido(string newCliente, Nodo* listaClientes);
+    void setClientePedido(Nodo* listaClientes);
     Nodo* getClientePedido();
     
-    void setVeiculoPedido(string newTipo, Nodo* listaVeiculos);
+    void setVeiculoPedido(Nodo* listaVeiculos);
     Nodo* getVeiculoPedido();
     
-    void setLongitude(int newLongitude);
+    void setLongitude();
     string getLongitude();
     
-    void setLatitude(int newLatitude);
+    void setLatitude();
     string getLatitude();
 
     Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo, int newLongitude, int newLatitude);

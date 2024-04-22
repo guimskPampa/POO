@@ -63,7 +63,11 @@ int main(){
         
         dynamic_cast<Veiculo*>(listaVeiculos)->setTipo();
         dynamic_cast<Veiculo*>(listaVeiculos)->setCapacidadeCarga();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setEndereco();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setAnoFabricacao();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setChassi();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setLatitude();
+        dynamic_cast<Veiculo*>(listaVeiculos)->setLongitude();
+
       }
       else if (escolhaFuncao == 2){
         delete listaVeiculos;
@@ -78,7 +82,18 @@ int main(){
     case 3:
   
      if (escolhaFuncao == 1){
-         listaPedidos = new Pedido(listaPedidos, 1, 2, 3, 4, listaClientes, listaVeiculos,1,1);
+
+         listaPedidos = new Pedido(listaPedidos, 0, 0, 0, 0, NULL, NULL,0,0);
+
+         dynamic_cast<Pedido*>(listaPedidos)->setDia();
+         dynamic_cast<Pedido*>(listaPedidos)->setMes();
+         dynamic_cast<Pedido*>(listaPedidos)->setAno();
+         dynamic_cast<Pedido*>(listaPedidos)->setCusto();
+         dynamic_cast<Pedido*>(listaPedidos)->setLatitude();
+         dynamic_cast<Pedido*>(listaPedidos)->setLongitude();
+         dynamic_cast<Pedido*>(listaPedidos)->setClientePedido(listaClientes);
+         dynamic_cast<Pedido*>(listaPedidos)->setVeiculoPedido(listaVeiculos);
+         
       }
       else if (escolhaFuncao == 2){
         delete listaPedidos;
