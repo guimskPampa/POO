@@ -11,36 +11,36 @@ class Nodo: public Recurso {
 
   private:
   
-    int atributoInt1;//Clientes::Idade      ; Veiculos::CapacidadeCarga           ; Pedidos:: Dia;
-    int atributoInt2;//Clientes::           ; Veiculos::AnoFabricacao             ; Pedidos:: Mes;
-    int atributoInt3;//Clientes::           ; Veiculos::Chassi                    ; Pedidos:: Ano;
-    int atributoInt4;//Clientes::           ; Veiculos::                          ; Pedidos:: ;
+    int int1;//Clientes::Idade      ; Veiculos::CapacidadeCarga           ; Pedidos:: Dia;
+    int int2;//Clientes::           ; Veiculos::AnoFabricacao             ; Pedidos:: Mes;
+    int int3;//Clientes::           ; Veiculos::Chassi                    ; Pedidos:: Ano;
+    int int4;//Clientes::           ; Veiculos::                          ; Pedidos:: ;
     
     int longitude;
     int latitude;
     
-    string atributoString1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
-    string atributoString2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
+    string string1;//Clientes::Nome           ; Veiculos::Tipo            ; Pedidos:: ;
+    string string2;//Clientes::Endereco       ; Veiculos::                ; Pedidos:: ;
     
-    Nodo* atributoNodo1;//Clientes::           ; Veiculos::                          ; Pedidos:: Cliente;
-    Nodo* atributoNodo2;//Clientes::           ; Veiculos::                          ; Pedidos:: Veiculo;
+    Nodo* nodo1;//Clientes::           ; Veiculos::                          ; Pedidos:: Cliente;
+    Nodo* nodo2;//Clientes::           ; Veiculos::                          ; Pedidos:: Veiculo;
     
     Nodo* proximoNodo;
     Nodo* anteriorNodo;
     
   protected:
   
-    void setAtributoInt1 (int newAtributoInt1);
-    int getAtributoInt1 ();
+    void setInt1 (int newAtributoInt1);
+    int getInt1 ();
     
-    void setAtributoInt2 (int newAtributoInt2);
-    int getAtributoInt2 ();
+    void setInt2 (int newAtributoInt2);
+    int getInt2 ();
     
-    void setAtributoInt3 (int newAtributoInt3);
-    int getAtributoInt3 ();
+    void setInt3 (int newAtributoInt3);
+    int getInt3 ();
     
-    void setAtributoInt4 (int newAtributoInt4);
-    int getAtributoInt4 ();
+    void setInt4 (int newAtributoInt4);
+    int getInt4 ();
     
     virtual void setLongitude (int newLongitude);
     int getLongitude();
@@ -48,11 +48,11 @@ class Nodo: public Recurso {
     virtual void setLatitude (int newLatitude);
     int getLatitude();
     
-    void setAtributoString1 (string newAtributoString1);
-    string getAtributoString1 ();
+    void setString1 (string newAtributoString1);
+    string getString1 ();
     
-    void setAtributoString2 (string newAtributoString2);
-    string getAtributoString2 ();
+    void setString2 (string newAtributoString2);
+    string getString2 ();
     
     void setProximoNodo (Nodo* newProximoNodo);
     Nodo* getProximoNodo();
@@ -60,12 +60,12 @@ class Nodo: public Recurso {
     void setAnteriorNodo (Nodo* newAnteriorNodo);
     Nodo* getAnteriorNodo();
     
-    void setAtributoNodo1 (Nodo* newNodo);
-    void setAtributoNodo2 (Nodo* newNodo);
+    void setNodo1 (Nodo* newNodo);
+    void setNodo2 (Nodo* newNodo);
     void setNodoCondicionalString(string newNodo, Nodo *listaNodos, int escolhaAtributo);
     
-    Nodo* getAtributoNodo1();
-    Nodo* getAtributoNodo2();
+    Nodo* getNodo1();
+    Nodo* getNodo2();
     
     void mostraNodoVeiculo();
     void mostraNodoCliente();
