@@ -1,11 +1,14 @@
 
 ===================Resolucao===================
 
--Resolver toLowerString in Nodo;
+-pedido crashando em caso de pedido ou veiculo inexistente;
+
 
 ===================Criacao===================
 
 -Criar condicionais nas funcoes de set;
+-criar mostrar pedido solo;
+-criar indentificador de pedido;
 
 ===================Alteracoes===================
--Virtual latitude e longitude;
+-Melhorar parte grafica;
