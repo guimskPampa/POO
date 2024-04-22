@@ -9,6 +9,7 @@ void Cliente::setIdade(){
     if (newIdade>=18){
     
       this->setAtributoInt1 (newIdade); 
+      return;
     }
     else{
     
@@ -30,6 +31,7 @@ void Cliente::setNome(){
   //if(buscaCliente(listaClientes, newNome)!=0){
   
     this->setAtributoString1 (newNome);
+    return;
  // }
  // else{
     
@@ -50,6 +52,7 @@ void Cliente::setEndereco(){
   cin >> newEndereco;
   
   this->setAtributoString2 (newEndereco);
+  return;
 }
 
 string Cliente::getEndereco(){
@@ -65,12 +68,7 @@ Nodo* Cliente::getProximoCliente(){
 }
 
 Cliente::Cliente(Nodo* listaClientes, int idade, string nome, string endereco)
-        :Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL,0,0){
-        cout<<"CRIADO1";
-  //cout<< "Digite idade, nome e endereco do novo cliente:\n";
-  //cin >> idade >> nome >> endereco;
-  //(listaNodosClientes, 1,2,3,4,"g","f", teste1, teste2)
-  
+        :Nodo(listaClientes, idade, 0, 0, 0, nome, endereco, NULL, NULL,0,0){  
 }
 
 Cliente::~Cliente(){

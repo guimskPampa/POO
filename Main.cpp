@@ -23,12 +23,12 @@ int main(){
 
   while(escolhaClasse!=0&&escolhaFuncao!=0){
   
-    cout<<"Escolha dentre as opcoes:\n";
-    cout<<"1-Cliente;\n2- Veiculo\n3- Pedido\n0- Parar programa\n";
+    cout<<"Escolha dentre as opcoes:\n"<<endl;
+    cout<<"1-Cliente;\n2- Veiculo\n3- Pedido\n0- Parar programa\n"<<endl;
     cin>>escolhaClasse;
     
-    cout<<"Baseada na escolha anterior escolha dentre as opcoes:\n";
-    cout<<"1-Criar;\n2- Deletar\n3- Informacoes\n0- Parar programa\n";
+    cout<<"Baseada na escolha anterior escolha dentre as opcoes:\n"<<endl;
+    cout<<"1-Criar;\n2- Deletar\n3- Informacoes\n0- Parar programa\n"<<endl;
     cin>>escolhaFuncao;
     
     
@@ -55,55 +55,61 @@ int main(){
           return 0;
         }
         
-    case 2:
-    
-      if (escolhaFuncao == 1){
-      
-        listaVeiculos = new Veiculo(listaVeiculos, 0, 0, 0, "0",0,0);
+      break;
         
-        dynamic_cast<Veiculo*>(listaVeiculos)->setTipo();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setCapacidadeCarga();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setAnoFabricacao();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setChassi();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setLatitude();
-        dynamic_cast<Veiculo*>(listaVeiculos)->setLongitude();
+      case 2:
+    
+        if (escolhaFuncao == 1){
+      
+          listaVeiculos = new Veiculo(listaVeiculos, 0, 0, 0, "0",0,0);
+        
+         dynamic_cast<Veiculo*>(listaVeiculos)->setTipo();
+         dynamic_cast<Veiculo*>(listaVeiculos)->setCapacidadeCarga();
+         dynamic_cast<Veiculo*>(listaVeiculos)->setAnoFabricacao();
+         dynamic_cast<Veiculo*>(listaVeiculos)->setChassi();
+         dynamic_cast<Veiculo*>(listaVeiculos)->setLatitude();
+         dynamic_cast<Veiculo*>(listaVeiculos)->setLongitude();
 
-      }
-      else if (escolhaFuncao == 2){
-        delete listaVeiculos;
-      }
-      else if (escolhaFuncao == 3){
-        dynamic_cast<Veiculo*>(listaVeiculos)->mostraListaVeiculo();
-      }
-      else{
+       }
+        else if (escolhaFuncao == 2){
+          delete listaVeiculos;
+        }
+        else if (escolhaFuncao == 3){
+          dynamic_cast<Veiculo*>(listaVeiculos)->mostraListaVeiculo();
+        }
+        else{
+            return 0;
+          }
+
+      break;
+
+      case 3:
+  
+        if (escolhaFuncao == 1){
+
+          listaPedidos = new Pedido(listaPedidos, 0, 0, 0, 0, NULL, NULL,0,0);
+
+          dynamic_cast<Pedido*>(listaPedidos)->setDia();
+          dynamic_cast<Pedido*>(listaPedidos)->setMes();
+          dynamic_cast<Pedido*>(listaPedidos)->setAno();
+          dynamic_cast<Pedido*>(listaPedidos)->setCusto();
+          dynamic_cast<Pedido*>(listaPedidos)->setLatitude();
+          dynamic_cast<Pedido*>(listaPedidos)->setLongitude();
+          dynamic_cast<Pedido*>(listaPedidos)->setClientePedido(listaClientes);
+          dynamic_cast<Pedido*>(listaPedidos)->setVeiculoPedido(listaVeiculos);
+         
+        }
+        else if (escolhaFuncao == 2){
+          delete listaPedidos;
+        }
+        else if (escolhaFuncao == 3){
+  
+        }
+        else{
           return 0;
         }
-        
-    case 3:
-  
-     if (escolhaFuncao == 1){
 
-         listaPedidos = new Pedido(listaPedidos, 0, 0, 0, 0, NULL, NULL,0,0);
-
-         dynamic_cast<Pedido*>(listaPedidos)->setDia();
-         dynamic_cast<Pedido*>(listaPedidos)->setMes();
-         dynamic_cast<Pedido*>(listaPedidos)->setAno();
-         dynamic_cast<Pedido*>(listaPedidos)->setCusto();
-         dynamic_cast<Pedido*>(listaPedidos)->setLatitude();
-         dynamic_cast<Pedido*>(listaPedidos)->setLongitude();
-         dynamic_cast<Pedido*>(listaPedidos)->setClientePedido(listaClientes);
-         dynamic_cast<Pedido*>(listaPedidos)->setVeiculoPedido(listaVeiculos);
-         
-      }
-      else if (escolhaFuncao == 2){
-        delete listaPedidos;
-      }
-      else if (escolhaFuncao == 3){
-  
-      }
-      else{
-          return 0;
-      }
+      break;
     }
     cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
   }

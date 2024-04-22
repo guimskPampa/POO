@@ -176,9 +176,12 @@ void Nodo::buscaAtributoString1(Nodo* lista, string target, int objeto){
       switch(objeto){
       
         case 1: mostraNodoCliente();
+
+        break;
   
         case 2: mostraNodoVeiculo();
-    
+
+        break;
       }
       return;
     } 
