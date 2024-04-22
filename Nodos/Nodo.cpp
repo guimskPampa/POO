@@ -155,9 +155,15 @@ void Nodo::mostraNodoVeiculo(){
   return;
 }
 
-void Nodo::mostraNodoPedido(){
+void Nodo::NodosPedido(){
+
   this->nodo1->mostraNodoCliente();
   this->nodo2->mostraNodoVeiculo();
+
+  if (this->proximoNodo!=NULL){
+    this->proximoNodo->NodosPedido();
+  }
+
   return;
 }
 

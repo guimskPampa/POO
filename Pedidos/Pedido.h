@@ -41,7 +41,7 @@ class Pedido : public Nodo{
     Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* cliente, Nodo* veiculo, int newLongitude, int newLatitude);
     virtual ~Pedido();
     
-    void mostraPedido();
+    void mostraListaPedido();
 
     Nodo* veiculoPerto(Nodo* listaVeiculos);
 };

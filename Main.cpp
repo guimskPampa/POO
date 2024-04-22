@@ -107,7 +107,9 @@ int main(){
           delete dynamic_cast<Pedido*>(listaPedidos);
         }
         else if (escolhaFuncao == 3){
-          dynamic_cast<Pedido*>(listaPedidos)->mostraPedido();
+          if (listaVeiculos!=NULL){
+            dynamic_cast<Pedido*>(listaPedidos)->mostraListaPedido();
+          }
         }
         else{
           return 0;

@@ -68,7 +68,6 @@ class Nodo: public Recurso {
     
     void mostraNodoVeiculo();
     void mostraNodoCliente();
-    void mostraNodoPedido();
     
     Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2, int newLongitude, int newLatitude);
     virtual ~Nodo();
@@ -78,6 +77,7 @@ class Nodo: public Recurso {
     
     virtual void NodosCliente();
     virtual void NodosVeiculo();
+    void NodosPedido();
 
     Nodo* menorDistancia(Nodo* listaVeiculos);
 

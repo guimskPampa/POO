@@ -126,8 +126,8 @@ Pedido:: Pedido(Nodo* listaNodo,int ano, int mes, int dia, int custo, Nodo* clie
 
 Pedido::~Pedido(){
 }
-void Pedido::mostraPedido(){
-  this->mostraNodoPedido();
+void Pedido::mostraListaPedido(){
+  this->NodosPedido();
 }
 
 Nodo* Pedido::veiculoPerto(Nodo* listaVeiculos){
