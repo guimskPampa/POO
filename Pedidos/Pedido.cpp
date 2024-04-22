@@ -7,11 +7,11 @@ void Pedido::setDia(){
   cout<<"Informe o dia do pedido:\n"<<endl;
   cin>>newDia;
 
-  this->setAtributoInt1 (newDia);
+  this->setInt1 (newDia);
 }
     
 int Pedido::getDia(){
-  return this->getAtributoInt1 ();
+  return this->getInt1 ();
 }
 
 void Pedido::setMes(){
@@ -20,11 +20,11 @@ void Pedido::setMes(){
   cout<<"Informe o mes do pedido:\n"<<endl;
   cin>>newMes;
 
-  this->setAtributoInt2 (newMes);
+  this->setInt2 (newMes);
 }
     
 int Pedido::getMes(){
-  return this->getAtributoInt2 ();
+  return this->getInt2 ();
 }
     
 void Pedido::setAno(){
@@ -33,11 +33,11 @@ void Pedido::setAno(){
   cout<<"Informe o ano do pedido:\n"<<endl;
   cin>>newAno;
 
-  this->setAtributoInt3 (newAno); 
+  this->setInt3 (newAno); 
 }
     
 int Pedido::getAno(){
-  return this->getAtributoInt3 ();
+  return this->getInt3 ();
 }
     
 void Pedido::setCusto(){
@@ -46,11 +46,11 @@ void Pedido::setCusto(){
   cout<<"Informe o custo do pedido:\n"<<endl;
   cin>>newCusto;
 
-  this->setAtributoInt4 (newCusto); 
+  this->setInt4 (newCusto); 
 }
     
 int Pedido::getCusto(){
-  return this->getAtributoInt4 ();
+  return this->getInt4 ();
 }
     
 void Pedido::setClientePedido(Nodo* listaClientes){
@@ -72,11 +72,11 @@ void Pedido::setVeiculoPedido(Nodo* listaVeiculos){
 }
 
 Nodo* Pedido::getClientePedido(){
-  return this->getAtributoNodo1();
+  return this->getNodo1();
 }
 
 Nodo* Pedido::getVeiculoPedido(){
-  return this->getAtributoNodo2();
+  return this->getNodo2();
 }
 
 void Pedido::setLatitude(){

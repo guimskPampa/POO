@@ -72,7 +72,7 @@ class Nodo: public Recurso {
     
     Nodo(Nodo* listaNodos, int newInt1, int newInt2, int newInt3, int newInt4, string newString1, string newString2, Nodo* newNodo1, Nodo* newNodo2, int newLongitude, int newLatitude);
     
-    void buscaAtributoString1(Nodo* lista, string target, int objeto);
+    void buscaString1(Nodo* lista, string target, int objeto);
     
     virtual void NodosCliente();
     virtual void NodosVeiculo();

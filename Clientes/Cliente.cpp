@@ -8,7 +8,7 @@ void Cliente::setIdade(){
     
     if (newIdade>=18){
     
-      this->setAtributoInt1 (newIdade); 
+      this->setInt1 (newIdade); 
       return;
     }
     else{
@@ -19,7 +19,7 @@ void Cliente::setIdade(){
 }
 
 int Cliente::getIdade(){
-  return this->getAtributoInt1 ();
+  return this->getInt1 ();
 }
 
 void Cliente::setNome(){
@@ -30,7 +30,7 @@ void Cliente::setNome(){
   
   //if(buscaCliente(listaClientes, newNome)!=0){
   
-    this->setAtributoString1 (newNome);
+    this->setString1 (newNome);
     return;
  // }
  // else{
@@ -42,7 +42,7 @@ void Cliente::setNome(){
 }
 
 string Cliente::getNome(){
-  return this->getAtributoString1 ();
+  return this->getString1 ();
 }
 
 void Cliente::setEndereco(){
@@ -51,12 +51,12 @@ void Cliente::setEndereco(){
   cout << "Informe o endereco do cliente:\n"<< endl;
   cin >> newEndereco;
   
-  this->setAtributoString2 (newEndereco);
+  this->setString2 (newEndereco);
   return;
 }
 
 string Cliente::getEndereco(){
-  return this->getAtributoString2 ();
+  return this->getString2 ();
 }
 
 void Cliente::setProximoCliente(Nodo* newProximoCliente){
@@ -84,5 +84,5 @@ void Cliente::mostraListaCliente(){
 }
 
  void Cliente::buscaCliente(Nodo* lista, string nome){
-  buscaAtributoString1(lista, nome, 1);
+  buscaString1(lista, nome, 1);
  }

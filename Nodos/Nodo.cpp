@@ -174,7 +174,7 @@ void Nodo::NodosVeiculo(){
   return;
 }
 
-void Nodo::buscaAtributoString1(Nodo* lista, string target, int objeto){
+void Nodo::buscaString1(Nodo* lista, string target, int objeto){
   Nodo* aux = lista;
       
   while(aux!=NULL){

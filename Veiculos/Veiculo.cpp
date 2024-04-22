@@ -6,11 +6,11 @@ void Veiculo::setTipo(){
   cout<<"informe o tipo de veiculo: carro, moto, caminhao ou aviao:\n"<<endl;
   cin>>newTipo;
 
-  this->setAtributoString1 (newTipo);
+  this->setString1 (newTipo);
 }
 
 string Veiculo::getTipo(){
-  return  this->getAtributoString1 ();
+  return  this->getString1 ();
 }
      
 void Veiculo::setCapacidadeCarga(){
@@ -19,11 +19,11 @@ void Veiculo::setCapacidadeCarga(){
   cout<<"informe a quantia de capacidade de carga:\n"<<endl;
   cin>>newCapacidadeCarga;
   
-  this->setAtributoInt1 (newCapacidadeCarga); 
+  this->setInt1 (newCapacidadeCarga); 
 }
 
 int Veiculo::getCapacidadeCarga(){
-  return this->getAtributoInt1 (); 
+  return this->getInt1 (); 
 }
 
 void Veiculo::setAnoFabricacao(){
@@ -32,11 +32,11 @@ void Veiculo::setAnoFabricacao(){
   cout<<"informe o ano de fabricação:\n"<<endl;
   cin>>newAnoFabricacao;
 
-  this->setAtributoInt2 (newAnoFabricacao);
+  this->setInt2 (newAnoFabricacao);
 }
 
 int Veiculo::getAnoFabricacao(){
-  return  this->getAtributoInt2 ();
+  return  this->getInt2 ();
 }
      
 void Veiculo::setChassi(){
@@ -45,11 +45,11 @@ void Veiculo::setChassi(){
   cout<<"informe o chassi:\n"<<endl;
   cin>>newChassi;
 
-  this->setAtributoInt3 (newChassi);
+  this->setInt3 (newChassi);
 }
 
 int Veiculo::getChassi(){
-  return this->getAtributoInt3 ();
+  return this->getInt3 ();
 }
 
 void Veiculo::setProximoVeiculo(Nodo* newProximoVeiculo){
@@ -101,5 +101,5 @@ void Veiculo::mostraListaVeiculo(){
 }
 
 void Veiculo::buscaVeiculo(Nodo* lista, string tipo){
-  buscaAtributoString1(lista, tipo, 2);
+  buscaString1(lista, tipo, 2);
 }
