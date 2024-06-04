@@ -1,12 +1,14 @@
 #ifndef MAIN_CPP
 #define MAIN_CPP
 
-#include  <iostream>
-#include  <string>
-#include  "Clientes/Cliente.h"
-#include  "Veiculos/Veiculo.h"
-#include  "Pedidos/Pedido.h"
+#include <iostream>
+#include <string>
+#include "Clientes/Cliente.h"
+#include "Veiculos/Veiculo.h"
+#include "Pedidos/Pedido.h"
 #include "Nodos/Nodo.h"
+#include "DataManager.h"
+#include "Geolocalização.h"
 
 
 using namespace std;
@@ -17,7 +19,20 @@ int main(){
   Nodo* listaClientes = NULL;
   Nodo* listaVeiculos = NULL;
   Nodo* listaPedidos = NULL;
+
+  DataManager dataManager("dados_entregas.csv"); 
+
+  for (const auto& cliente : dataManager.pedidos) {
+    cout << "Cliente: " << cliente->getNome() << ", " << cliente->getEmail() << endl;
+  }
  
+  for (const auto& pedido : dataManager.pedidos){
+    Coordenadas coordColeta = Geolocalização::converterEndereco (pedido-> getEnderecoColeta());
+    Coordenadas coordEntrega = Geolocalização::converterEndereco (pedido-> getEnderecoEntrega());
+    cout << "Pedido de " << pedido-> getCliente()-> getNome()
+    << " de " << coordColeta.latitude << ", " << coordColeta.longitude 
+    << " para " << coordEntrega.latitude << ", " << coordEntrega.longitude << endl; 
+  }
   
   int escolhaClasse=1, escolhaFuncao=1;
 
